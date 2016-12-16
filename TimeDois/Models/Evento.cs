@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using TimeDois.Models.Base;
 
 namespace TimeDois.Models
@@ -29,5 +30,6 @@ namespace TimeDois.Models
         {
             Participantes.Add(new Participacao(usuario, this));
         }
+        
     }
 }

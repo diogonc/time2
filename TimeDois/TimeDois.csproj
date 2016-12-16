@@ -185,6 +185,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Avaliacao.cs" />
     <Compile Include="Models\Base\Entidade.cs" />
+    <Compile Include="Models\DetalhesDoEventoViewModel.cs" />
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\GrupoDeUsuario.cs" />
     <Compile Include="Models\Participacao.cs" />
