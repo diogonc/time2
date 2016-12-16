@@ -52,7 +52,7 @@
         </p>
 
         <details>
-            <address>@Model.Endereco</address>
+            @*<address>@Model.Endereco</address>*@
             <span class="valor">@Model.ValorDeInscricao.FormatarMonetarioOuZero()</span>
             <time>@Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()</time>
             <a href="@Model.Link" target="_blank">Página do evento</a>
