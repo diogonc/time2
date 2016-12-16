@@ -3,12 +3,13 @@
 <head>
     <title>Time2 Digieventos</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <!--<link href="@Url.Content("~/Content")" rel="stylesheet" type="text/css" />-->
+    <link href="@Url.Content("~/Content/css/estilos.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/FontAwesome/css/font-awesome.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <main>
         @Html.Partial("_Header")
-        <section id="section">
+        <section id="section" class="section container">
             @RenderBody()
         </section>
         @Html.Partial("_Footer")
