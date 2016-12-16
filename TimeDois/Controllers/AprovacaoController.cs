@@ -22,11 +22,18 @@ namespace TimeDois.Controllers
 
         public ActionResult Listar()
         {
-            var participacoes = _participacaoRepository.ObterTodos().ToList().Where(p => p.Avaliacoes.Any(a => !a.UsuarioQueAvaliou.EhGerencia()));
+            var participacoes = _participacaoRepository.ObterTodos().ToList().Where(p => !p.Avaliacoes.Any(a => a.UsuarioQueAvaliou.EhGerencia()));
 
             var viewModel = new ListaDeParticipacoesViewModel { Participacoes = participacoes };
 
             return View(viewModel);
+        }
+
+        public ActionResult Detalhes(int participacaoId)
+        {
+            var participacao = _participacaoRepository.ObterPor(e => e.Id == participacaoId).FirstOrDefault();
+            var eventoViewModel = new DetalhesDaParticipacaoViewModel(participacao);
+            return View(eventoViewModel);
         }
 
         public ActionResult Avaliar(int participacaoId, bool aprovado)

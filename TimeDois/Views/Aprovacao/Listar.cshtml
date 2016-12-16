@@ -35,9 +35,12 @@
                             </div>
                         </article>
                         <footer class="card-footer">
+                            <a href="@Url.Action("Detalhes")?participacaoId=@participacao.Id" class="card-footer-item">Mais detalhes</a>
+                        </footer>
+                        @*<footer class="card-footer">
                             <a href="@Url.Action("Avaliar")?participacaoId=@participacao.Id&aprovado=true" class="card-footer-item">Aprovar</a>
                             <a href="@Url.Action("Avaliar")?participacaoId=@participacao.Id&aprovado=true" class="card-footer-item">Reprovar</a>
-                        </footer>
+                        </footer>*@
                     </div>
                 </li>
             }
