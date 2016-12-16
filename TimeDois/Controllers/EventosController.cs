@@ -15,5 +15,10 @@ namespace TimeDois.Controllers
             var evento = new Evento();
             return View(evento);
         }
+
+        public ActionResult Participar(string eventoid)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
