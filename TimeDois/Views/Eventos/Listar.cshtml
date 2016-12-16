@@ -1,150 +1,44 @@
+@using TimeDois.Extensoes
+@model TimeDois.ViewModel.ListaDeEventosViewModel
+<div>
+    <h1>Lista de eventos</h1>
+</div>
 ﻿
 <section id="section" class="section container">
     <div class="container">
         <div class="heading">
             <h1 class="title is-2">Próximos eventos</h1>
         </div>
-        <hr />
 
         <ul class="columns-flexible">
-            <li class="column-flexible">
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="http://agiletrendsbr.com/2014/wp-content/uploads/2014/02/logo-agiletrends-350x218.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="heading">
-                                <h5 class="title is-5"><strong>Agile Trends</strong></h5>
+            @foreach (var evento in Model.Eventos)
+            {
+                <li class="column-flexible">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-64x64">
+                                    <img src="@evento.UrlDaLogo" alt="Image">
+                                </figure>
                             </div>
-                            <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                            <span>6-7 nov/2017</span>
-                            <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                            <span>São Paulo - SP</span>
-                        </div>
-                    </article>
-                    <footer class="card-footer">
-                        <a href="@Url.Action("Detalhes")?eventoId=1" class="card-footer-item">Quero ir!</a>
-                    </footer>
-                </div>
-            </li>
-            <li class="column-flexible">
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="http://agiletrendsbr.com/2014/wp-content/uploads/2014/02/logo-agiletrends-350x218.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="heading">
-                                <h5 class="title is-5"><strong>Agile Trends</strong></h5>
+                            <div class="media-content">
+                                <div class="heading">
+                                    <h5 class="title is-5"><strong>@evento.Nome</strong></h5>
+                                </div>
+                                <span class="icon is-small"><i class="fa fa-calendar"></i></span>
+                                <span>@evento.DataInicio.FormatarDiaMesAno() - @evento.DataFim.FormatarDiaMesAno()</span>
+                                <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
+                                <span>@evento.Cidade - @evento.Estado</span>
                             </div>
-                            <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                            <span>6-7 nov/2017</span>
-                            <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                            <span>São Paulo - SP</span>
-                        </div>
-                    </article>
-                    <footer class="card-footer">
-                        <a href="@Url.Action("Detalhes")?eventoId=1" class="card-footer-item">Quero ir!</a>
-                    </footer>
-                </div>
-            </li>
-            <li class="column-flexible">
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="http://agiletrendsbr.com/2014/wp-content/uploads/2014/02/logo-agiletrends-350x218.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="heading">
-                                <h5 class="title is-5"><strong>Agile Trends</strong></h5>
-                            </div>
-                            <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                            <span>6-7 nov/2017</span>
-                            <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                            <span>São Paulo - SP</span>
-                        </div>
-                    </article>
-                    <footer class="card-footer">
-                        <a href="@Url.Action("Detalhes")?eventoId=1" class="card-footer-item">Quero ir!</a>
-                    </footer>
-                </div>
-            </li>
-            <li class="column-flexible">
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="http://agiletrendsbr.com/2014/wp-content/uploads/2014/02/logo-agiletrends-350x218.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="heading">
-                                <h5 class="title is-5"><strong>Agile Trends</strong></h5>
-                            </div>
-                            <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                            <span>6-7 nov/2017</span>
-                            <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                            <span>São Paulo - SP</span>
-                        </div>
-                    </article>
-                    <footer class="card-footer">
-                        <a href="@Url.Action("Detalhes")?eventoId=1" class="card-footer-item">Quero ir!</a>
-                    </footer>
-                </div>
-            </li>
-            <li class="column-flexible">
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="http://agiletrendsbr.com/2014/wp-content/uploads/2014/02/logo-agiletrends-350x218.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="heading">
-                                <h5 class="title is-5"><strong>Agile Trends</strong></h5>
-                            </div>
-                            <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                            <span>6-7 nov/2017</span>
-                            <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                            <span>São Paulo - SP</span>
-                        </div>
-                    </article>
-                    <footer class="card-footer">
-                        <a href="@Url.Action("Detalhes")?eventoId=1" class="card-footer-item">Quero ir!</a>
-                    </footer>
-                </div>
-            </li>
-            <li class="column-flexible">
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="http://agiletrendsbr.com/2014/wp-content/uploads/2014/02/logo-agiletrends-350x218.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="heading">
-                                <h5 class="title is-5"><strong>Agile Trends</strong></h5>
-                            </div>
-                            <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                            <span>6-7 nov/2017</span>
-                            <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                            <span>São Paulo - SP</span>
-                        </div>
-                    </article>
-                    <footer class="card-footer">
-                        <a href="@Url.Action("Detalhes")?eventoId=1" class="card-footer-item">Quero ir!</a>
-                    </footer>
-                </div>
-            </li>
+                        </article>
+                        <footer class="card-footer">
+                            <a href="@Url.Action("Detalhes")?eventoId=@evento.Id" class="card-footer-item">Quero ir!</a>
+                        </footer>
+                    </div>
+                </li>
+            }
+          
         </ul>
     </div>
 </section>
+

@@ -13,7 +13,6 @@ namespace TimeDois.Context
 
         public DbSet<Avaliacao> Avaliacoes { get; set; }
         public DbSet<Evento> Eventos { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Participacao> Participacoes { get; set; }
         public DbSet<Time> Times { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
@@ -25,7 +24,6 @@ namespace TimeDois.Context
             dbModelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
             dbModelBuilder.Configurations.Add(new AvaliacaoMap());
-            dbModelBuilder.Configurations.Add(new EnderecoMap());
             dbModelBuilder.Configurations.Add(new EventoMap());
             dbModelBuilder.Configurations.Add(new ParticipacaoMap());
             dbModelBuilder.Configurations.Add(new TimeMap());
@@ -45,10 +43,6 @@ namespace TimeDois.Context
                 .HasRequired(x => x.Participacao)
                 .WithMany(x => x.Avaliacoes)
                 .Map(x => x.MapKey("IdParticipacao"));
-
-            dbModelBuilder.Entity<Endereco>()
-                .HasRequired(x => x.Evento)
-                .WithOptional(x => x.Endereco);
 
             dbModelBuilder.Entity<Participacao>()
                 .HasRequired(x => x.Evento)
