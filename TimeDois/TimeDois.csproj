@@ -134,6 +134,7 @@
     <Content Include="Content\Bulma\base\helpers.sass" />
     <Content Include="Content\Bulma\base\minireset.sass" />
     <Content Include="Content\Bulma\base\_all.sass" />
+    <Content Include="Content\css\estilos.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
@@ -220,6 +221,9 @@
     <Content Include="Content\FontAwesome\scss\_screen-reader.scss" />
     <Content Include="Content\FontAwesome\scss\_stacked.scss" />
     <Content Include="Content\FontAwesome\scss\_variables.scss" />
+    <Content Include="Content\config.rb" />
+    <Content Include="Content\sass\estilos.sass" />
+    <Content Include="Content\css\estilos.css.map" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Views\Shared\_Footer.cshtml" />
