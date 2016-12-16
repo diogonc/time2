@@ -17,11 +17,11 @@
                     <p class="subtitle">
                         @Model.Descricao
                     </p>
-                    <a href="@Url.Action("Participar", "Eventos", new {eventoId = @Model.Id})" class="@(@Model.UsuarioInteressado((string) Session["Login"]) ? "is-success is-disabled" : "") button is-large is-primary is-inverted">
+                    <a href="@Url.Action("Participar", "Eventos", new {eventoId = @Model.Id})" class="@Model.CssDoBotaoDeInteresse((string) Session["Login"]) button is-large is-primary is-inverted">
                         <span class="icon">
                             <i class="fa fa-star"></i>
                         </span>
-                        <span>@(@Model.UsuarioInteressado((string) Session["Login"]) ? "Eu vou!" : "Quero ir!")</span>
+                        <span>@Model.TextoDoBotaoDeInteresse((string) Session["Login"])</span>
                     </a>
                 </div>
             </div>

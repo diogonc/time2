@@ -35,9 +35,38 @@ namespace TimeDois.ViewModel
         public string Estado { get; set; }
         public decimal ValorDeInscricao { get; set; }
 
-        public bool UsuarioInteressado(String login)
+        public string CssDoBotaoDeInteresse(string login)
         {
-            return Participantes.Any(participacao => participacao.Usuario.Login == login);
+            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Aprovado))
+            {
+                return "is-success is-disabled";
+            }
+            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.EmAnalise))
+            {
+                return "is-warning is-disabled";
+            }
+            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Reprovado))
+            {
+                return "is-danger is-disabled";
+            }
+            return "";
+        }
+
+        public string TextoDoBotaoDeInteresse(string login)
+        {
+            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Aprovado))
+            {
+                return "Eu vou!";
+            }
+            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.EmAnalise))
+            {
+                return "Em análise";
+            }
+            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Reprovado))
+            {
+                return "Eu não vou!";
+            }
+            return "Quero ir!";
         }
 
     }
