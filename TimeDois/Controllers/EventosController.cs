@@ -1,11 +1,23 @@
-﻿using System;
+using System;
 using System.Web.Mvc;
+using TimeDois.Context;
 using TimeDois.Models;
+using TimeDois.Repositorio;
 
 namespace TimeDois.Controllers
 {
     public class EventosController : Controller
     {
+        private Time2Entities _contexto;
+        private UsuarioRepository _usuarioRepository;
+        private EventoRepository _eventoRepository;
+
+        public EventosController()
+        {
+            _contexto = new Time2Entities();
+            _usuarioRepository = new UsuarioRepository(_contexto);
+            _eventoRepository = new EventoRepository(_contexto);
+        }
         public ActionResult Listar()
         {
             return View();
@@ -27,9 +39,14 @@ namespace TimeDois.Controllers
             return View(evento);
         }
 
-        public ActionResult Participar(string eventoid)
+        public ActionResult Participar(int eventoId)
         {
-            throw new System.NotImplementedException();
+            var login = (string) Session["Login"];
+            var usuario = _usuarioRepository.Obter(u => u.Login == login);
+            var evento = _eventoRepository.Obter(e => e.Id == eventoId);
+            evento.TenhoInteresse(usuario);
+            _eventoRepository.Atualizar(evento);
+            return RedirectToAction("Detalhes", "Eventos", new {eventoId = evento.Id});
         }
     }
 }
