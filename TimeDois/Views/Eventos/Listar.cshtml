@@ -24,7 +24,7 @@
                                 </div>
                                 <div>
                                     <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                                    <span>@evento.DataInicio.FormatarDiaMesAno() - @evento.DataFim.FormatarDiaMesAno()</span>
+                                    <span>@evento.DataInicio.Day/@evento.DataInicio.EscreverMes().Substring(0, 3) - @evento.DataFim.Day/@evento.DataFim.EscreverMes().Substring(0, 3)</span>
                                 </div>
                                 <div>
                                     <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
