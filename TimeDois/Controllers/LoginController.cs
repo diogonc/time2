@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using TimeDois.Models;
 using TimeDois.ViewModel;
 
 namespace TimeDois.Controllers
@@ -14,6 +15,8 @@ namespace TimeDois.Controllers
         [HttpPost]
         public ActionResult Logar(LoginViewModel viewModel)
         {
+            Session["Login"] = viewModel.Login;
+
             return RedirectToAction("Listar", "Eventos");
         }
     }
