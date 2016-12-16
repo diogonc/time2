@@ -10,6 +10,8 @@ namespace TimeDois.ViewModel
             Avaliacoes = new List<Avaliacao>();
         }
         public virtual int Id { get; set; }
+        public virtual string Justificativa { get; set; }
+        public virtual int ParticipacaoId { get; set; }
         public virtual Usuario Usuario { get; set; }
         public virtual Evento Evento { get; set; }
         public virtual ICollection<Avaliacao> Avaliacoes { get; set; }

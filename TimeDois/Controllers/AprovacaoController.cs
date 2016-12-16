@@ -36,14 +36,28 @@ namespace TimeDois.Controllers
             return View(eventoViewModel);
         }
 
-        public ActionResult Avaliar(int participacaoId, bool aprovado)
+        public ActionResult Aprovar(DetalhesDaParticipacaoViewModel viewlModel)
         {
             var login = Session["Login"].ToString();
-            var participacao = _participacaoRepository.Obter(p => p.Id == participacaoId);
+            var participacao = _participacaoRepository.Obter(p => p.Id == viewlModel.ParticipacaoId);
             var usuario = _usuarioRepository.Obter(u =>  u.Login == login );
-            var justificativa = aprovado ? "Porque sim" : "Porque não";
-            
-            var avaliacao = new Avaliacao(usuario, aprovado, justificativa);
+
+            var avaliacao = new Avaliacao(usuario, true, viewlModel.Justificativa);
+
+            participacao.AdicionarAvaliacao(avaliacao);
+
+            _participacaoRepository.Atualizar(participacao);
+
+            return RedirectToAction("Listar", "Aprovacao");
+        }
+
+        public ActionResult Reprovar(DetalhesDaParticipacaoViewModel viewlModel)
+        {
+            var login = Session["Login"].ToString();
+            var participacao = _participacaoRepository.Obter(p => p.Id == viewlModel.ParticipacaoId);
+            var usuario = _usuarioRepository.Obter(u => u.Login == login);
+
+            var avaliacao = new Avaliacao(usuario, false, viewlModel.Justificativa);
 
             participacao.AdicionarAvaliacao(avaliacao);
 
