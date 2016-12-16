@@ -19,6 +19,8 @@ namespace TimeDois.ViewModel
             Cidade = evento.Cidade;
             Estado = evento.Estado;
             ValorDeInscricao = evento.ValorDeInscricao;
+            ValorDaPassagem = evento.ValorDaPassagem;
+            ValorDaDiaria = ((DataFim - DataInicio).Days + 1) * 440m;
             Endereco = evento.Endereco;
         }
 
