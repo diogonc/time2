@@ -1,7 +1,5 @@
-﻿@model TimeDois.Models.Evento
-@{
-    Layout = null;
-}
+﻿@using TimeDois.Extensoes
+@model TimeDois.Models.Evento
 
 <article>
     <h1>@Model.Nome</h1>
@@ -14,9 +12,16 @@
 
     <details>
         <address>@Model.Endereco</address>
-        <time>@Model.DataInicio - @Model.DataFim</time>
+        <span class="valor">@Model.ValorDeInscricao.FormatarMonetarioOuZero()</span>
+        <time>@Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()</time>
+        <a href="@Model.Link" target="_blank">Página do evento</a>
     </details>
+
+    <footer>
+        <p>
+            <button>Desejo participar dessa bagaça</button>
+        </p>
+    </footer>
 </article>
 
 
-etc

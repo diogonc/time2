@@ -147,6 +147,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Extensoes\Extensoes.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -222,7 +223,6 @@
     <Content Include="Content\FontAwesome\scss\_stacked.scss" />
     <Content Include="Content\FontAwesome\scss\_variables.scss" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
