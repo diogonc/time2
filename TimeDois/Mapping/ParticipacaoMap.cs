@@ -11,8 +11,6 @@ namespace TimeDois.Mapping
             ToTable("Participacao");
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnType("int").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-            Property(x => x.Justificativa).HasColumnType("nvarchar").IsRequired();
-            Property(x => x.PercentualDeSubsidio).HasColumnType("int").IsRequired();
         }
     }
 }

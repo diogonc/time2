@@ -29,7 +29,7 @@ namespace TimeDois.Controllers
             var viewModel = new OrcamentoViewModel
             {
                 ValorDisponivel = timeLogado.OrcamentoTotal,
-                ValorUtilizado = participacoes.Sum(p => p.Evento.ValorDeInscricao)
+                ValorUtilizado = participacoes.Sum(p => p.Evento.ValorDeInscricao + p.Evento.ValorDaPassagem)
             };
             
             return View(viewModel);
