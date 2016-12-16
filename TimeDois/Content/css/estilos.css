@@ -5291,4 +5291,9 @@ body {
   border-right-color: #ffdd57;
 }
 
+.nav-item .fa {
+  font-size: 1.5em;
+  margin-left: 1em;
+}
+
 /*# sourceMappingURL=estilos.css.map */
