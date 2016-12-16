@@ -12,7 +12,6 @@ namespace TimeDois.Mapping
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnType("int").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
             Property(x => x.Nome).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
-            Property(x => x.Endereco).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
             Property(x => x.UrlDaLogo).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
             Property(x => x.Descricao).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
             Property(x => x.ValorDeInscricao).HasColumnType("decimal").IsRequired();

@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
+using TimeDois.Models.Base;
 
 namespace TimeDois.Models
 {
-    public class Participacao
+    public class Participacao : Entidade
     {
-        public int Id { get; set; }
-        public Usuario Usuario { get; set; }
-        public Evento Evento { get; set; }
-        public IEnumerable<Avaliacao> Avaliacoes { get; set; } 
+        public virtual Usuario Usuario { get; set; }
+        public virtual Evento Evento { get; set; }
+        public virtual ICollection<Avaliacao> Avaliacoes { get; set; } 
 
         public Participacao(Usuario usuario, Evento evento)
         {

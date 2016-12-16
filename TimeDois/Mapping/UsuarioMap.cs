@@ -8,7 +8,7 @@ namespace TimeDois.Mapping
     {
         public UsuarioMap()
         {
-            ToTable("Time");
+            ToTable("Usuario");
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnType("int").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
             Property(x => x.Login).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
