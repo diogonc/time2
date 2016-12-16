@@ -20,10 +20,15 @@ namespace TimeDois.Models
         public string Login { get; set; }
         public string Nome { get; set; }
         public string Senha { get; set; }
-        public int GrupoDeUsuario { get; set; }
+        public GrupoDeUsuario GrupoDeUsuario { get; set; }
         public virtual Time Time { get; set; }
         
         public virtual ICollection<Participacao> Participacoes { get; set; }
         public virtual ICollection<Avaliacao> Avaliacoes { get; set; }
+
+        public virtual bool EhGerencia()
+        {
+            return GrupoDeUsuario == GrupoDeUsuario.Gerencia;
+        }
     }
 }

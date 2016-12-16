@@ -7,12 +7,21 @@ namespace TimeDois.Models
     {
         public virtual Usuario Usuario { get; set; }
         public virtual Evento Evento { get; set; }
-        public virtual ICollection<Avaliacao> Avaliacoes { get; set; } 
+        public virtual ICollection<Avaliacao> Avaliacoes { get; set; }
+
+        protected Participacao() { }
 
         public Participacao(Usuario usuario, Evento evento)
         {
             Usuario = usuario;
             Evento = evento;
+
+            Avaliacoes = new List<Avaliacao>();
+        }
+
+        public void AdicionarAvaliacao(Avaliacao avaliacao)
+        {
+            Avaliacoes.Add(avaliacao);
         }
     }
 

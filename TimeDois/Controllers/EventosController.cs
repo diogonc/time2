@@ -23,7 +23,7 @@ namespace TimeDois.Controllers
         public ActionResult Listar()
         {
             var eventos = _eventoRepository.ObterTodos();
-            var viewModel = new ListaDeEventosViewModel() {Eventos =  eventos};
+            var viewModel = new ListaDeEventosViewModel {Eventos =  eventos};
 
             return View(viewModel);
         }

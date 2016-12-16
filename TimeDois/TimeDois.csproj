@@ -155,6 +155,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Context\Time2Entities.cs" />
+    <Compile Include="Controllers\AprovacaoController.cs" />
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Extensoes\Extensoes.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="Repositorio\TimeRepository.cs" />
     <Compile Include="Repositorio\UsuarioRepository.cs" />
     <Compile Include="ViewModel\ListaDeEventosViewModel.cs" />
+    <Compile Include="ViewModel\ListaDeParticipacoesViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +267,7 @@
     <Content Include="Content\sass\estilos.sass" />
     <Content Include="Content\css\estilos.css.map" />
     <Content Include="Content\sass\theme\grid\_grid.sass" />
+    <Content Include="Views\Aprovacao\Listar.cshtml" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />

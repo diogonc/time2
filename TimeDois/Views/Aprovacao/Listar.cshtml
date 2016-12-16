@@ -1,0 +1,47 @@
+﻿@using TimeDois.Extensoes
+@model TimeDois.ViewModel.ListaDeParticipacoesViewModel
+<section id="section" class="section container">
+    <div class="container">
+        <div class="heading">
+            <h1 class="title is-2">Solicitações de Subsídios</h1>
+        </div>
+
+        <ul class="columns-flexible">
+            @foreach (var participacao in Model.Participacoes)
+            {
+                <li class="column-flexible">
+                    <div class="box">
+                        <article class="media">
+                            @*<div class="media-left">
+                                <figure class="image is-64x64">
+                                    <img src="@evento.UrlDaLogo" alt="Image">
+                                </figure>
+                            </div>*@
+                            <div class="media-content">
+                                <div class="heading">
+                                    <h5 class="title is-5"><strong>@participacao.Usuario.Nome</strong></h5>
+                                </div>
+                                <div class="heading">
+                                    <h5 class="title is-5"><strong>@participacao.Evento.Nome</strong></h5>
+                                </div>
+                                <div>
+                                    <span class="icon is-small"><i class="fa fa-calendar"></i></span>
+                                    <span>@participacao.Evento.DataInicio.FormatarDiaMesAno() - @participacao.Evento.DataFim.FormatarDiaMesAno()</span>
+                                </div>
+                                <div>
+                                    <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
+                                    <span>@participacao.Evento.Cidade - @participacao.Evento.Estado</span>
+                                </div>
+                            </div>
+                        </article>
+                        <footer class="card-footer">
+                            <a href="@Url.Action("Avaliar")?participacaoId=@participacao.Id&aprovado=true" class="card-footer-item">Aprovar</a>
+                            <a href="@Url.Action("Avaliar")?participacaoId=@participacao.Id&aprovado=true" class="card-footer-item">Reprovar</a>
+                        </footer>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
+
