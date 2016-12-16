@@ -16,8 +16,8 @@
     <section class="hero is-primary is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <div class="card is-inline-block">
-                    <div class="card-content">
+                <div class="card is-inline-block is-login">
+                    <div class="card-content is-login">
                         <div>
                             <figure class="image">
                                 <img src="@Url.Content("~/Content/quero-ir-logo.svg")" alt="Image" class="is-128">
@@ -28,7 +28,7 @@
                         {
                             <p class="control has-icon">
                                 @Html.TextBoxFor(x => x.Login, new { @class = "input", placeholder = "Usuário" })
-                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-user"></i>
                             </p>
 
                             <p class="control has-icon">
@@ -36,7 +36,7 @@
                                 <i class="fa fa-lock"></i>
                             </p>
                             <p class="control">
-                                <button class="button is-success" type="submit">
+                                <button class="button is-white is-large is-fullwidth is-outlined" type="submit">
                                     Login
                                 </button>
                             </p>

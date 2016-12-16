@@ -58,7 +58,10 @@
             <ul class="columns-flexible">
                 @foreach (var participante in Model.Participantes)
                 {
-                    <li>@participante.Usuario.Nome</li>
+                    <li>
+                        <span>@participante.Usuario.Nome</span>
+                        <span>@participante.Status.ToDescription(false) </span>
+                    </li>
                 }
             </ul>
         </div>

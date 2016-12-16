@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using TimeDois.Models.Base;
 
 namespace TimeDois.Models
@@ -8,6 +9,19 @@ namespace TimeDois.Models
         public virtual Usuario Usuario { get; set; }
         public virtual Evento Evento { get; set; }
         public virtual ICollection<Avaliacao> Avaliacoes { get; set; }
+
+        public virtual StatusDaParticipacao Status 
+        {
+            get
+            {
+                if (Avaliacoes.Any(a => !a.UsuarioQueAvaliou.EhGerencia() && a.Aprovado))
+                {
+                    return StatusDaParticipacao.Aprovado;
+                }
+                return Avaliacoes.Any(a => !a.UsuarioQueAvaliou.EhGerencia() && !a.Aprovado) ? StatusDaParticipacao.Reprovado : StatusDaParticipacao.EmAnalise;
+            }
+            
+        }
 
 
         protected Participacao() { }
@@ -25,5 +39,4 @@ namespace TimeDois.Models
             Avaliacoes.Add(avaliacao);
         }
     }
-
 }

@@ -159,6 +159,7 @@
     <Compile Include="Controllers\AprovacaoController.cs" />
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OrcamentoController.cs" />
     <Compile Include="Extensoes\Extensoes.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,6 +196,7 @@
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\GrupoDeUsuario.cs" />
     <Compile Include="Models\Participacao.cs" />
+    <Compile Include="Models\StatusDaParticipacao.cs" />
     <Compile Include="Models\Time.cs" />
     <Compile Include="Models\TipoDeAvaliacao.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -275,7 +277,7 @@
     <Content Include="Content\css\estilos.css.map" />
     <Content Include="Content\sass\theme\grid\_grid.sass" />
     <Content Include="Views\Aprovacao\Listar.cshtml" />
-    <Content Include="Content\sass\theme\theme.sass" />
+    <Content Include="Content\sass\theme\_theme.sass" />
     <Content Include="Views\Aprovacao\Detalhes.cshtml" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
@@ -283,6 +285,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Orcamento\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -37,7 +37,7 @@ namespace TimeDois.ViewModel
 
         public bool UsuarioInteressado(String login)
         {
-            return Participantes.Select(participacao => participacao.Usuario.Login == login).FirstOrDefault();
+            return Participantes.Any(participacao => participacao.Usuario.Login == login);
         }
 
     }
