@@ -1,8 +1,22 @@
-﻿
+﻿@model TimeDois.Models.Evento
 @{
     Layout = null;
 }
 
-<h2>Nome do evento</h2>
+<article>
+    <h1>@Model.Nome</h1>
+
+    <img src="@Model.UrlDaLogo" alt="Logomarca do evento"/>
+
+    <p class="descricao">
+        @Model.Descricao
+    </p>
+
+    <details>
+        <address>@Model.Endereco</address>
+        <time>@Model.DataInicio - @Model.DataFim</time>
+    </details>
+</article>
+
 
 etc

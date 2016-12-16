@@ -150,6 +150,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Avaliacao.cs" />
+    <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\Participacao.cs" />
     <Compile Include="Models\Time.cs" />

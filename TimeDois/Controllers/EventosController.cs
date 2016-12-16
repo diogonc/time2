@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using TimeDois.Models;
 
 namespace TimeDois.Controllers
 {
@@ -11,7 +12,8 @@ namespace TimeDois.Controllers
 
         public ActionResult Detalhes(int eventoId)
         {
-            return View();
+            var evento = new Evento();
+            return View(evento);
         }
     }
 }
