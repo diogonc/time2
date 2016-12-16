@@ -27,10 +27,11 @@ namespace TimeDois.Models
             Participantes = new List<Participacao>();
         }
 
-        public void ManifestarInteresse(Usuario usuario)
+        public Participacao ManifestarInteresse(Usuario usuario)
         {
-            Participantes.Add(new Participacao(usuario, this));
+            var participacao = new Participacao(usuario, this);
+            Participantes.Add(participacao);
+            return participacao;
         }
-        
     }
 }
