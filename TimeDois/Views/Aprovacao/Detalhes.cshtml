@@ -1,0 +1,83 @@
+﻿@using TimeDois.Extensoes
+@model TimeDois.ViewModel.DetalhesDaParticipacaoViewModel
+
+@using (Html.BeginForm("Avaliar", "Aprovacao", FormMethod.Post))
+{
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column is-narrow">
+                        <figure class="image" style="width: 300px">
+                            <img src="@Model.Evento.UrlDaLogo" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <p class="title">
+                            @Model.Usuario.Nome
+                        </p>
+                        <p class="title">
+                            @Model.Evento.Nome
+                        </p>
+                        <p class="subtitle">
+                            @Model.Evento.Descricao
+                        </p>
+                        <a class="button is-large is-primary is-inverted" onclick="Enviar(true)">
+                            <span class="icon">
+                                <i class="fa fa-thumbs-o-up"></i>
+                            </span>
+                            <span>Aprovar</span>
+                        </a>
+                        <a class="button is-large is-primary is-inverted" onclick="Enviar(false)">
+                            <span class="icon">
+                                <i class="fa fa-thumbs-o-down"></i>
+                            </span>
+                            <span>Reprovar</span>
+                        </a>
+                        @*<a href="@Url.Action("Avaliar")?participacaoId=@Model.Id&aprovado=true" class="card-footer-item">Aprovar</a>
+                            <a href="@Url.Action("Avaliar")?participacaoId=@Model.Id&aprovado=true" class="card-footer-item">Reprovar</a>*@
+                        @Html.HiddenFor(x => x.Aprovado)
+                        @Html.HiddenFor(x => x.ParticipacaoId)
+                    </div>
+                    <div class="column is-narrow">
+                        <h5 class="title is-5">
+                            <strong>Data</strong>
+                        </h5>
+                        <p class="subtitle">
+                            @Model.Evento.DataInicio.FormatarDiaMesAno() - @Model.Evento.DataFim.FormatarDiaMesAno()
+                        </p>
+                        <h5 class="title is-5">
+                            <strong>Local</strong>
+                        </h5>
+                        <p class="subtitle">
+                            @Model.Evento.Cidade - @Model.Evento.Estado
+                        </p>
+                        <h5 class="title is-5">
+                            <strong>Preço</strong>
+                        </h5>
+                        <p class="subtitle">
+                            @Model.Evento.ValorDeInscricao.FormatarMonetarioOuZero()
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section" class="section container">
+        <div class="columns">
+            <div class="column">
+                <label class="label">Justificativa *</label>
+                <p class="control">
+                    @Html.TextAreaFor(model => model.Justificativa, new { @class = "textarea", @placeholder = "Informe a justificativa da aprovação ou reprovação" })
+                </p>
+            </div>
+        </div>
+    </section>
+}
+<script>
+    function Enviar(aprovado) {
+        document.forms[0].Aprovado.value = aprovado;
+        document.forms[0].submit();
+    }
+</script>

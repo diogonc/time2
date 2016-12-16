@@ -193,7 +193,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Avaliacao.cs" />
     <Compile Include="Models\Base\Entidade.cs" />
-    <Compile Include="Models\DetalhesDoEventoViewModel.cs" />
+    <Compile Include="ViewModel\DetalhesDoEventoViewModel.cs" />
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\GrupoDeUsuario.cs" />
     <Compile Include="Models\Participacao.cs" />
@@ -207,6 +207,7 @@
     <Compile Include="Repositorio\ParticipacaoRepository.cs" />
     <Compile Include="Repositorio\TimeRepository.cs" />
     <Compile Include="Repositorio\UsuarioRepository.cs" />
+    <Compile Include="ViewModel\DetalhesDaParticipacaoViewModel.cs" />
     <Compile Include="ViewModel\ListaDeEventosViewModel.cs" />
     <Compile Include="ViewModel\ListaDeParticipacoesViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -279,6 +280,7 @@
     <Content Include="Content\sass\theme\grid\_grid.sass" />
     <Content Include="Views\Aprovacao\Listar.cshtml" />
     <Content Include="Content\sass\theme\_theme.sass" />
+    <Content Include="Views\Aprovacao\Detalhes.cshtml" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />

@@ -29,14 +29,20 @@ namespace TimeDois.Controllers
             return View(viewModel);
         }
 
-        public ActionResult Avaliar(int participacaoId, bool aprovado)
+        public ActionResult Detalhes(int participacaoId)
+        {
+            var participacao = _participacaoRepository.ObterPor(e => e.Id == participacaoId).FirstOrDefault();
+            var eventoViewModel = new DetalhesDaParticipacaoViewModel(participacao);
+            return View(eventoViewModel);
+        }
+
+        public ActionResult Avaliar(DetalhesDaParticipacaoViewModel viewlModel)
         {
             var login = Session["Login"].ToString();
-            var participacao = _participacaoRepository.Obter(p => p.Id == participacaoId);
+            var participacao = _participacaoRepository.Obter(p => p.Id == viewlModel.ParticipacaoId);
             var usuario = _usuarioRepository.Obter(u =>  u.Login == login );
-            var justificativa = aprovado ? "Porque sim" : "Porque não";
-            
-            var avaliacao = new Avaliacao(usuario, aprovado, justificativa);
+
+            var avaliacao = new Avaliacao(usuario, viewlModel.Aprovado, viewlModel.Justificativa);
 
             participacao.AdicionarAvaliacao(avaliacao);
 
