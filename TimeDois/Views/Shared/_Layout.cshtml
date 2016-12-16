@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Time2 Digieventos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link href="@Url.Content("~/Content/css/estilos.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/FontAwesome/css/font-awesome.css")" rel="stylesheet" type="text/css" />
@@ -9,9 +10,7 @@
 <body>
     <main>
         @Html.Partial("_Header")
-        <section id="section" class="section container">
-            @RenderBody()
-        </section>
+        @RenderBody()
         @Html.Partial("_Footer")
     </main>
 </body>

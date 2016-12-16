@@ -12,29 +12,21 @@
     <link href="@Url.Content("~/Content/FontAwesome/css/font-awesome.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <h2>Login</h2>
-
     <section class="hero is-success is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="card is-inline-block">
                     <div class="card-content">
-                        <div class="media is-inline-block">
-                            <div class="media-content">
-                                <figure class="image is-128x128">
-                                    <img src="http://4.bp.blogspot.com/_qe5TXi27TQA/SbpUFccySLI/AAAAAAAAEAY/H_1wbsJhog0/s400/carrefour-logo-logotipo-logomarca.png" alt="Image">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-5">John Smith</p>
-                                <p class="subtitle is-6">@@johnsmith</p>
-                            </div>
+                        <div>
+                            <figure class="image">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/TAM_Airlines_Logo.png" alt="Image" class="is-128">
+                            </figure>
                         </div>
 
                         @using (@Html.BeginForm("Logar", "Login"))
                         {
                             <p class="control has-icon">
-                                @Html.TextBoxFor(x => x.Login, new { @class="input", placeholder = "Usuário"})
+                                @Html.TextBoxFor(x => x.Login, new { @class = "input", placeholder = "Usuário" })
                                 <i class="fa fa-envelope"></i>
                             </p>
 
@@ -51,12 +43,12 @@
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     </section>
 
-    
+
 
 </body>
 </html>

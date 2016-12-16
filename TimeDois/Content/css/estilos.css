@@ -4488,7 +4488,7 @@ a.box:active {
   color: white;
 }
 .hero.is-white.is-bold {
-  background-image: linear-gradient(141deg, #e8e3e4 0%, white 71%, white 100%);
+  background-image: linear-gradient(141deg, #e8e3e4 0%, #ffffff 71%, #ffffff 100%);
 }
 @media screen and (max-width: 768px) {
   .hero.is-white .nav-toggle span {
@@ -4561,7 +4561,7 @@ a.box:active {
   color: #0a0a0a;
 }
 .hero.is-black.is-bold {
-  background-image: linear-gradient(141deg, black 0%, #0a0a0a 71%, #181616 100%);
+  background-image: linear-gradient(141deg, #000000 0%, #0a0a0a 71%, #181616 100%);
 }
 @media screen and (max-width: 768px) {
   .hero.is-black .nav-toggle span {
@@ -4634,7 +4634,7 @@ a.box:active {
   color: whitesmoke;
 }
 .hero.is-light.is-bold {
-  background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%);
+  background-image: linear-gradient(141deg, #dfd8d9 0%, #f5f5f5 71%, #ffffff 100%);
 }
 @media screen and (max-width: 768px) {
   .hero.is-light .nav-toggle span {
@@ -5140,6 +5140,28 @@ a.box:active {
 }
 .footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
   border-bottom-color: #00d1b2;
+}
+
+.columns-flexible .column-flexible {
+  margin: 0 0 1em;
+}
+
+@media screen and (min-width: 769px) {
+  .columns-flexible:not(.is-desktop) {
+    padding: 0;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .columns-flexible:not(.is-desktop) .column-flexible {
+    min-width: 31%;
+    margin: 1%;
+    display: inline-block;
+    -webkit-flex: 1 0;
+    flex: 1 0;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
