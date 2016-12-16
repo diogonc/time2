@@ -209,6 +209,7 @@
     <Compile Include="ViewModel\ListaDeEventosViewModel.cs" />
     <Compile Include="ViewModel\ListaDeParticipacoesViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\OrcamentoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

@@ -14,11 +14,11 @@ namespace TimeDois.Models
         {
             get
             {
-                if (Avaliacoes.Any(a => !a.UsuarioQueAvaliou.EhGerencia() && a.Aprovado))
+                if (Avaliacoes.Any(a => a.UsuarioQueAvaliou.EhGerencia() && a.Aprovado))
                 {
                     return StatusDaParticipacao.Aprovado;
                 }
-                return Avaliacoes.Any(a => !a.UsuarioQueAvaliou.EhGerencia() && !a.Aprovado) ? StatusDaParticipacao.Reprovado : StatusDaParticipacao.EmAnalise;
+                return Avaliacoes.Any(a => a.UsuarioQueAvaliou.EhGerencia() && !a.Aprovado) ? StatusDaParticipacao.Reprovado : StatusDaParticipacao.EmAnalise;
             }
             
         }
