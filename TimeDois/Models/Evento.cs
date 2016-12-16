@@ -16,6 +16,7 @@ namespace TimeDois.Models
         public string Logradouro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+        public string Endereco { get { return Logradouro + ", " + Cidade + " - " + Estado; } }
 
         public virtual ICollection<Participacao> Participantes { get; set; }
 
