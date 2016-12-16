@@ -1,0 +1,16 @@
+﻿.columns-flexible
+	.column-flexible
+		margin: 0 0 1em
+			
+@media screen and (min-width: 769px)
+	.columns-flexible:not(.is-desktop)
+		padding: 0
+		text-align: center
+		+display-flex
+		+flex-wrap(wrap)
+
+		.column-flexible
+			min-width: 31%
+			margin: 1%
+			display: inline-block
+			+flex(1 0)

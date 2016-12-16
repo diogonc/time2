@@ -258,6 +258,7 @@
     <Content Include="Content\config.rb" />
     <Content Include="Content\sass\estilos.sass" />
     <Content Include="Content\css\estilos.css.map" />
+    <Content Include="Content\sass\theme\grid\_grid.sass" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
