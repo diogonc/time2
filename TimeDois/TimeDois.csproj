@@ -190,6 +190,10 @@
     <Compile Include="Migrations\201612161828523_CriarOrcamentoDoTime.Designer.cs">
       <DependentUpon>201612161828523_CriarOrcamentoDoTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.cs" />
+    <Compile Include="Migrations\201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.Designer.cs">
+      <DependentUpon>201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Avaliacao.cs" />
     <Compile Include="Models\Base\Entidade.cs" />
@@ -313,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612161828523_CriarOrcamentoDoTime.resx">
       <DependentUpon>201612161828523_CriarOrcamentoDoTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.resx">
+      <DependentUpon>201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
