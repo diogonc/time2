@@ -1,4 +1,7 @@
-﻿@{
+﻿@using System.Globalization
+@using TimeDois.Extensoes
+@model TimeDois.ViewModel.OrcamentoViewModel
+@{
     Layout = null;
 }
 <section class="hero is-primary-darkened">
@@ -9,10 +12,10 @@
                     <i class="fa fa-dollar"></i>
                 </div>
                 <div class="column">
-                    <progress class="progress is-info" value="15" max="100">15%</progress>
+                    <progress class="progress @Model.ClasseDaBarra" value="@Model.PorcertagemUtilizada.ToString(CultureInfo.InvariantCulture)" max="100">@Model.PorcertagemUtilizada%</progress>
                 </div>
                 <div class="column is-narrow">
-                    R$ 435,00 / R$ 6.000,00 <strong style="color: white">(15%)</strong>
+                    @Model.ValorUtilizado.FormatarMonetarioOuZero() / @Model.ValorDisponivel.FormatarMonetarioOuZero() <strong style="color: white">(@Model.PorcertagemUtilizada%)</strong>
                 </div>
             </div>
         </div>
