@@ -9,6 +9,7 @@ namespace TimeDois.Models
         public virtual Evento Evento { get; set; }
         public virtual ICollection<Avaliacao> Avaliacoes { get; set; }
 
+
         protected Participacao() { }
 
         public Participacao(Usuario usuario, Evento evento)
