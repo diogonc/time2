@@ -14,6 +14,7 @@ namespace TimeDois.Mapping
             Property(x => x.Login).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
             Property(x => x.Nome).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
             Property(x => x.Senha).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
+            Property(x => x.GrupoDeUsuario).HasColumnType("int").IsRequired();
         }
     }
 }

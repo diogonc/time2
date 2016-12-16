@@ -182,6 +182,7 @@
     <Compile Include="Models\Avaliacao.cs" />
     <Compile Include="Models\Base\Entidade.cs" />
     <Compile Include="Models\Evento.cs" />
+    <Compile Include="Models\GrupoDeUsuario.cs" />
     <Compile Include="Models\Participacao.cs" />
     <Compile Include="Models\Time.cs" />
     <Compile Include="Models\TipoDeAvaliacao.cs" />
