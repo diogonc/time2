@@ -16,6 +16,7 @@ namespace TimeDois
         {
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
+            GlobalFilters.Filters.Add(new AutorizacaoAttribute());
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);            
         }
