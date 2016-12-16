@@ -5261,4 +5261,34 @@ body {
   border-left-width: 20px;
 }
 
+.box {
+  position: relative;
+}
+
+.validacao {
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+.validacao:after {
+  top: 0;
+  right: 0;
+  position: absolute;
+  content: " ";
+  border: 15px solid transparent;
+}
+.validacao.status-aprovado:after {
+  border-top-color: #23d160;
+  border-right-color: #23d160;
+}
+.validacao.status-reprovado:after {
+  border-top-color: #ff3860;
+  border-right-color: #ff3860;
+}
+.validacao.status-em-analise:after {
+  border-top-color: #ffdd57;
+  border-right-color: #ffdd57;
+}
+
 /*# sourceMappingURL=estilos.css.map */

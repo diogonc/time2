@@ -68,3 +68,34 @@
 
 	&:hover
 		border-left-width: 20px
+
+.box
+	position: relative
+
+.validacao
+	top: 0
+	right: 0
+	position: absolute
+	z-index: 1
+
+	&:after
+		top: 0
+		right: 0
+		position: absolute
+		content: " "
+		border: 15px solid transparent
+
+	&.status-aprovado
+		&:after
+			border-top-color: $success
+			border-right-color: $success
+
+	&.status-reprovado
+		&:after
+			border-top-color: $danger
+			border-right-color: $danger
+
+	&.status-em-analise
+		&:after
+			border-top-color: $warning
+			border-right-color: $warning
