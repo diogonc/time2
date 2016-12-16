@@ -22,7 +22,7 @@ namespace TimeDois.Controllers
 
         public ActionResult Listar()
         {
-            var participacoes = _participacaoRepository.ObterTodos().ToList().Where(p => p.Status == StatusDaParticipacao.EmAnalise);
+            var participacoes = _participacaoRepository.ObterTodos().ToList().Where(p => p.Status == StatusDaParticipacao.EmAnalise).OrderBy(x => x.Evento.DataInicio);
 
             var viewModel = new ListaDeParticipacoesViewModel { Participacoes = participacoes };
 

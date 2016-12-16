@@ -25,7 +25,7 @@ namespace TimeDois.Controllers
 
         public ActionResult Listar()
         {
-            var eventos = _eventoRepository.ObterTodos().ToList();
+            var eventos = _eventoRepository.ObterTodos().ToList().OrderBy(x => x.DataInicio);
             var viewModel = new ListaDeEventosViewModel { Eventos = eventos };
 
             return View(viewModel);
