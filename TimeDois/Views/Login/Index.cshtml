@@ -1,0 +1,16 @@
+﻿@using System.Web.UI.WebControls
+@model TimeDois.ViewModel.LoginViewModel
+@{
+    Layout = "";
+}
+
+<h2>Login</h2>
+
+@using (@Html.BeginForm("Logar", "Login"))
+{ 
+    @Html.LabelFor(x => x.Login)
+    @Html.TextBoxFor(x => x.Login)
+    @Html.LabelFor(x => x.Senha)
+    @Html.PasswordFor(x => x.Senha)
+    <button type="submit" title="Entrar">Entrar</button>
+}
