@@ -8,11 +8,11 @@ namespace TimeDois.Repositorio
 {
     public class EventoRepository
     {
-        private readonly Time2Entities _context;
+        private Time2Entities _context;
 
-        public EventoRepository()
+        public EventoRepository(Time2Entities context)
         {
-            _context = new Time2Entities();
+            _context = context;
         }
 
         public void Criar(Evento entity)

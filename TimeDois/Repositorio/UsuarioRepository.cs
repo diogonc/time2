@@ -10,9 +10,9 @@ namespace TimeDois.Repositorio
     {
         private readonly Time2Entities _context;
 
-        public UsuarioRepository()
+        public UsuarioRepository(Time2Entities contexto)
         {
-            _context = new Time2Entities();
+            _context = contexto;
         }
 
         public void Criar(Usuario entity)

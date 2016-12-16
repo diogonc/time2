@@ -171,6 +171,10 @@
     <Compile Include="Migrations\201612161334494_MigrationInicial.Designer.cs">
       <DependentUpon>201612161334494_MigrationInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612161451223_AdicionadoLinkAoEvento.cs" />
+    <Compile Include="Migrations\201612161451223_AdicionadoLinkAoEvento.Designer.cs">
+      <DependentUpon>201612161451223_AdicionadoLinkAoEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Avaliacao.cs" />
     <Compile Include="Models\Base\Entidade.cs" />
@@ -273,6 +277,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612161334494_MigrationInicial.resx">
       <DependentUpon>201612161334494_MigrationInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612161451223_AdicionadoLinkAoEvento.resx">
+      <DependentUpon>201612161451223_AdicionadoLinkAoEvento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
