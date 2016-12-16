@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Web.Http.Results;
+using System.Web.Mvc;
 using TimeDois.Models;
 
 namespace TimeDois.Controllers
@@ -18,7 +19,10 @@ namespace TimeDois.Controllers
 
         public ActionResult Participar(string eventoid)
         {
-            throw new System.NotImplementedException();
+            var usuario = new Usuario((string) Session["Login"]);
+            var evento = new Evento();
+            evento.TenhoInteresse(usuario);
+            return RedirectToAction("Detalhes", "Eventos", new {eventoId = evento.Id});
         }
     }
 }
