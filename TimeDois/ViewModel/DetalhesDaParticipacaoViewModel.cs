@@ -9,8 +9,8 @@ namespace TimeDois.ViewModel
         {
             Avaliacoes = new List<Avaliacao>();
         }
-        public virtual int Id { get; set; }
         public virtual string Justificativa { get; set; }
+        public virtual bool Aprovado { get; set; }
         public virtual int ParticipacaoId { get; set; }
         public virtual Usuario Usuario { get; set; }
         public virtual Evento Evento { get; set; }
@@ -18,9 +18,10 @@ namespace TimeDois.ViewModel
 
         public DetalhesDaParticipacaoViewModel(Participacao participacao)
         {
-            this.Usuario = participacao.Usuario;
-            this.Evento = participacao.Evento;
-            this.Avaliacoes = participacao.Avaliacoes;
+            Usuario = participacao.Usuario;
+            Evento = participacao.Evento;
+            Avaliacoes = participacao.Avaliacoes;
+            ParticipacaoId = participacao.Id;
         }
     }
 }
