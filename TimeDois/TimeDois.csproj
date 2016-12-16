@@ -16,7 +16,7 @@
     <RootNamespace>TimeDois</RootNamespace>
     <AssemblyName>TimeDois</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -142,6 +142,7 @@
     <Content Include="Content\Bulma\base\helpers.sass" />
     <Content Include="Content\Bulma\base\minireset.sass" />
     <Content Include="Content\Bulma\base\_all.sass" />
+    <Content Include="Content\css\estilos.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
@@ -249,7 +250,15 @@
     <Content Include="Content\FontAwesome\scss\_screen-reader.scss" />
     <Content Include="Content\FontAwesome\scss\_stacked.scss" />
     <Content Include="Content\FontAwesome\scss\_variables.scss" />
+    <Content Include="Content\config.rb" />
+    <Content Include="Content\sass\estilos.sass" />
+    <Content Include="Content\css\estilos.css.map" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -282,6 +291,8 @@
           <DevelopmentServerPort>29565</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/TimeDois</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:29565/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
