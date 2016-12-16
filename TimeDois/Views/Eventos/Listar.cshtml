@@ -1,37 +1,19 @@
-﻿<div>
+﻿@using TimeDois.Extensoes
+@model TimeDois.ViewModel.ListaDeEventosViewModel
+<div>
     <h1>Lista de eventos</h1>
 </div>
 
-@Session["Login"]
 <ul>
-    <li>
-        <a href="@Url.Action("Detalhes")?eventoId=1"><h2>Forum HSM</h2></a>
-        <div class="data">23/02/2009</div>
-        <div class="local">Campo Grande - MS</div>
-        <div class="tipo">Gestão</div>
-    </li>
-    <li>
-        <a href="@Url.Action("Detalhes")?eventoId=1"><h2>Forum HSM</h2></a>
-        <div class="data">23/02/2009</div>
-        <div class="local">Campo Grande - MS</div>
-        <div class="tipo">Gestão</div>
-    </li>
-    <li>
-        <a href="@Url.Action("Detalhes")?eventoId=1"><h2>Forum HSM</h2></a>
-        <div class="data">23/02/2009</div>
-        <div class="local">Campo Grande - MS</div>
-        <div class="tipo">Gestão</div>
-    </li>
-    <li>
-        <a href="@Url.Action("Detalhes")?eventoId=1"><h2>Forum HSM</h2></a>
-        <div class="data">23/02/2009</div>
-        <div class="local">Campo Grande - MS</div>
-        <div class="tipo">Gestão</div>
-    </li>
-    <li>
-        <a href="@Url.Action("Detalhes")?eventoId=1"><h2>Forum HSM</h2></a>
-        <div class="data">23/02/2009</div>
-        <div class="local">Campo Grande - MS</div>
-        <div class="tipo">Gestão</div>
-    </li>
+    @foreach (var evento in Model.Eventos)
+    {
+        <li>
+            <a href="@Url.Action("Detalhes")?eventoId=@evento.Id">
+                <h2>@evento.Nome</h2>
+            </a>
+            <div class="data">@evento.DataInicio.FormatarDiaMesAno()</div>
+            
+            <div class="tipo">@evento.Descricao</div>
+        </li>
+    }
 </ul>

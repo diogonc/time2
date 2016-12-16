@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using TimeDois.Context;
 using TimeDois.Models;
 using TimeDois.Repositorio;
+using TimeDois.ViewModel;
 
 namespace TimeDois.Controllers
 {
@@ -20,7 +21,10 @@ namespace TimeDois.Controllers
         }
         public ActionResult Listar()
         {
-            return View();
+            var eventos = _eventoRepository.ObterTodos();
+            var viewModel = new ListaDeEventosViewModel() {Eventos =  eventos};
+
+            return View(viewModel);
         }
 
         public ActionResult Detalhes(int eventoId)

@@ -191,6 +191,7 @@
     <Compile Include="Repositorio\ParticipacaoRepository.cs" />
     <Compile Include="Repositorio\TimeRepository.cs" />
     <Compile Include="Repositorio\UsuarioRepository.cs" />
+    <Compile Include="ViewModel\ListaDeEventosViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
