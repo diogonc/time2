@@ -48,11 +48,7 @@ namespace TimeDois.ViewModel
             {
                 return "is-warning is-disabled";
             }
-            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Reprovado))
-            {
-                return "is-danger is-disabled";
-            }
-            return "";
+            return Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Reprovado) ? "is-danger is-disabled" : "";
         }
 
         public string TextoDoBotaoDeInteresse(string login)
@@ -65,12 +61,16 @@ namespace TimeDois.ViewModel
             {
                 return "Em análise";
             }
-            if (Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Reprovado))
-            {
-                return "Eu não vou!";
-            }
-            return "Quero ir!";
+            return Participantes.Any(participacao => participacao.Usuario.Login == login && participacao.Status == StatusDaParticipacao.Reprovado) ? "Eu não vou!" : "Quero ir!";
         }
 
+        public string CssDoStatusDo(Participacao participante)
+        {
+            if (participante.Status == StatusDaParticipacao.Aprovado)
+            {
+                return "is-success";
+            }
+            return participante.Status == StatusDaParticipacao.EmAnalise ? "is-warning" : "is-danger";
+        }
     }
 }
