@@ -22,7 +22,10 @@ namespace TimeDois.ViewModel
             ValorDaPassagem = evento.ValorDaPassagem;
             ValorDaDiaria = ((DataFim - DataInicio).Days + 1) * 440m;
             Endereco = evento.Endereco;
+            NumeroDeInteressados = 4;
         }
+
+        public int NumeroDeInteressados { get; set; }
 
         public string Endereco { get; set; }
 

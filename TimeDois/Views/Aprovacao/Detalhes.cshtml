@@ -23,18 +23,44 @@
                             <p class="subtitle">
                                 @Model.Evento.Descricao
                             </p>
-                            <a class="button is-large is-success" onclick="Enviar(true)">
-                                <span class="icon">
-                                    <i class="fa fa-thumbs-o-up"></i>
-                                </span>
-                                <span>Aprovar</span>
-                            </a>
-                            <a class="button is-large is-danger" onclick="Enviar(false)">
-                                <span class="icon">
-                                    <i class="fa fa-thumbs-o-down"></i>
-                                </span>
-                                <span>Reprovar</span>
-                            </a>
+
+                            <div class="columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <a class="button is-large is-success" onclick="Enviar(true)">
+                                        <span class="icon">
+                                            <i class="fa fa-thumbs-o-up"></i>
+                                        </span>
+                                        <span>Aprovar</span>
+                                    </a>
+                                </div>
+                                <div class="column is-narrow">
+                                    <a class="button is-large is-danger" onclick="Enviar(false)">
+                                        <span class="icon">
+                                            <i class="fa fa-thumbs-o-down"></i>
+                                        </span>
+                                        <span>Reprovar</span>
+                                    </a>
+                                </div>
+                                <div class="column is-narrow">
+                                    <span class="icon">
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span>@Model.NumeroDeInteressados</span>
+                                </div>
+                                <div class="column is-narrow">
+                                    <span class="icon">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </span>
+                                    <span>@Model.NumeroDeGostei</span>
+                                </div>
+                                <div class="column is-narrow">
+                                    <span class="icon">
+                                        <i class="fa fa-thumbs-down"></i>
+                                    </span>
+                                    <span>@Model.NumeroDeNaoGostei</span>
+                                </div>
+                            </div>
+                            
                             @Html.HiddenFor(x => x.Aprovado)
                             @Html.HiddenFor(x => x.ParticipacaoId)
                         </div>
