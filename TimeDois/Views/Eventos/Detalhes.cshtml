@@ -24,6 +24,26 @@
                         <span>Tenho interesse</span>
                     </a>
                 </div>
+                <div class="column is-narrow">
+                    <h5 class="title is-5">
+                        <strong>Data</strong>
+                    </h5>
+                    <p class="subtitle">
+                        @Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()
+                    </p>
+                    <h5 class="title is-5">
+                        <strong>Local</strong>
+                    </h5>
+                    <p class="subtitle">
+                        @Model.Endereco
+                    </p>
+                    <h5 class="title is-5">
+                        <strong>Preço</strong>
+                    </h5>
+                    <p class="subtitle">
+                        @Model.ValorDeInscricao.FormatarMonetarioOuZero()
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -31,39 +51,6 @@
 
 <section id="section" class="section container">
 
-    <section class="section">
-        <div class="container">
-            <div class="heading">
-                <h1 class="title">@Model.Nome</h1>
-                <h2 class="subtitle">
-                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-                </h2>
-            </div>
-        </div>
-    </section>
-
-    <article>
-        <h1>@Model.Nome</h1>
-
-        <img src="@Model.UrlDaLogo" alt="Logomarca do evento" />
-
-        <p class="descricao">
-            @Model.Descricao
-        </p>
-
-        <details>
-            <address>@Model.Endereco</address>
-            <span class="valor">@Model.ValorDeInscricao.FormatarMonetarioOuZero()</span>
-            <time>@Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()</time>
-            <a href="@Model.Link" target="_blank">Página do evento</a>
-        </details>
-
-        <footer>
-            <p>
-                @Html.ActionLink("Desejo participar dessa bagaça", "Participar", "Eventos", new { eventoId = @Model.Nome }, null)
-            </p>
-        </footer>
-    </article>
-
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=@Model.Endereco.FormatarUrl()&key=AIzaSyCXK02xR8GjV-34Gp1ou_92YoGZeKxT1eM" allowfullscreen></iframe>
 
 </section>

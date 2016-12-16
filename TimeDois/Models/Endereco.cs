@@ -13,5 +13,10 @@ namespace TimeDois.Models
             return Logradouro + ", " + Cidade + " - " + Estado;
         }
         public virtual Evento Evento { get; set; }
+
+        public string FormatarUrl()
+        {
+            return ToString().Replace(" ", "+");
+        }
     }
 }
