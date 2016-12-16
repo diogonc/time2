@@ -1,22 +1,19 @@
-﻿<section class="hero is-primary">
+﻿<section class="hero is-primary-darkened">
     <div class="hero-head">
         <div class="container">
             <nav class="nav">
                 <div class="nav-left">
                     <a class="nav-item is-brand" href="/">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/TAM_Airlines_Logo.png" alt="Image" class="is-128">
+                        <img src="@Url.Content("~/Content/quero-ir-logo.svg")" alt="Image" class="is-128" style="width: 122px;height: 40px;max-height:40px">
                     </a>
                 </div>
                 <div id="nav-menu" class="nav-right nav-menu">
                     <span class="nav-item">
                         @if (Session["Login"] == null)
                         {
-                            <a class="button is-primary is-inverted" href="https://github.com/jgthms/bulma/archive/0.2.3.zip">
-                                <span class="icon">
-                                    <i class="fa fa-lock"></i>
-                                </span>
-                                <span>Login</span>
-                            </a>
+                            <script>
+                                window.location.href = "/TimeDois";
+                            </script>
                         }
                         else
                         {
@@ -27,6 +24,8 @@
             </nav>
         </div>
     </div>
+</section>
+<section class="hero is-primary-darkened">
     <div class="hero-head">
         <div class="container" style="padding: 10px; align-items: center;">
             <div class="columns is-vcentered">
@@ -36,9 +35,12 @@
                 <div class="column">
                     <progress class="progress is-success" value="15" max="100">15%</progress>
                 </div>
-                <div class="column is-narrow">R$ 435,00 / R$ 6.000,00 <strong style="color: white">(15%)</strong></div>
+                <div class="column is-narrow">R$ 435,00 / R$ 6.000,00 <strong style="color: white">(15%)</strong>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+
 

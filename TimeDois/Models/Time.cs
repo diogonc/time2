@@ -11,6 +11,7 @@ namespace TimeDois.Models
         }
 
         public string Nome { get; set; } 
+        public decimal OrcamentoTotal { get; set; }
         public virtual ICollection<Usuario> Integrantes { get; set; }
     }
 }

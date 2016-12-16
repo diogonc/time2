@@ -5164,5 +5164,9 @@ a.box:active {
     flex: 1 0;
   }
 }
+.is-primary-darkened {
+  background-color: #3c2269;
+  color: #fff;
+}
 
 /*# sourceMappingURL=estilos.css.map */

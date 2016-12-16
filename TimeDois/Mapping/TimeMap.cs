@@ -12,6 +12,7 @@ namespace TimeDois.Mapping
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnType("int").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
             Property(x => x.Nome).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
+            Property(x => x.OrcamentoTotal).HasColumnType("decimal").IsRequired();
         }
     }
 }
