@@ -293,7 +293,7 @@
     <Content Include="Views\Aprovacao\Listar.cshtml" />
     <Content Include="Content\sass\theme\_theme.sass" />
     <Content Include="Views\Aprovacao\Detalhes.cshtml" />
-    <None Include="Views\Eventos\Detalhes.cshtml" />
+    <Content Include="Views\Eventos\Detalhes.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

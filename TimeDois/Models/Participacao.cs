@@ -23,7 +23,6 @@ namespace TimeDois.Models
             
         }
 
-
         protected Participacao() { }
 
         public Participacao(Usuario usuario, Evento evento)
