@@ -20,9 +20,10 @@ namespace TimeDois.Controllers
             _usuarioRepository = new UsuarioRepository(_contexto);
             _eventoRepository = new EventoRepository(_contexto);
         }
+
         public ActionResult Listar()
         {
-            var eventos = _eventoRepository.ObterTodos();
+            var eventos = _eventoRepository.ObterTodos().ToList();
             var viewModel = new ListaDeEventosViewModel {Eventos =  eventos};
 
             return View(viewModel);
