@@ -181,6 +181,12 @@
     <Compile Include="Models\TipoDeAvaliacao.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\AvaliacaoRepository.cs" />
+    <Compile Include="Repositorio\EnderecoRepository.cs" />
+    <Compile Include="Repositorio\EventoRepository.cs" />
+    <Compile Include="Repositorio\ParticipacaoRepository.cs" />
+    <Compile Include="Repositorio\TimeRepository.cs" />
+    <Compile Include="Repositorio\UsuarioRepository.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +291,8 @@
           <DevelopmentServerPort>29565</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/TimeDois</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:29565/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
