@@ -42,6 +42,14 @@
             <p class="heading">Inscrição</p>
             <p class="title">@Model.ValorDeInscricao.FormatarMonetarioOuZero()</p>
         </div>
+        <div class="level-item has-text-centered">
+            <p class="heading">Diária</p>
+            <p class="title">@Model.ValorDaDiaria.FormatarMonetarioOuZero()</p>
+        </div>
+        <div class="level-item has-text-centered">
+            <p class="heading">Inscrição</p>
+            <p class="title">@Model.ValorDaPassagem.FormatarMonetarioOuZero()</p>
+        </div>
     </div>
 </section>
 
@@ -51,15 +59,31 @@
             <iframe width="600" height="450" frameborder="0" style="border: 0" src="https://www.google.com/maps/embed/v1/place?q=@(Model.Endereco.Replace(" ", "+"))&key=AIzaSyCXK02xR8GjV-34Gp1ou_92YoGZeKxT1eM" allowfullscreen></iframe>
         </div>
         <div class="column">
-            <ul class="columns-flexible">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Colaboradores interessados no evento</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
                 @foreach (var participante in Model.Participantes)
                 {
-                    <li>
-                        <span>@participante.Usuario.Nome</span>
-                        <span>@participante.Status.ToDescription(false) </span>
-                    </li>
+                    <tr>
+                        <td>
+
+                            <span class="title is-5">
+                                    @participante.Usuario.Nome
+                                </span>
+
+                        </td>
+                        <td class="has-text-right">
+                            <span class="tag is-info">@participante.Status.ToDescription(false) </span>
+                        </td>
+                    </tr>
                 }
-            </ul>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>

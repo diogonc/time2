@@ -1055,15 +1055,15 @@ table th {
   color: #78649b;
 }
 .message.is-info {
-  background-color: #ecf9fe;
+  background-color: #eef3fc;
 }
 .message.is-info .message-header {
-  background-color: #6dcdf4;
-  color: rgba(0, 0, 0, 0.7);
+  background-color: #3273dc;
+  color: white;
 }
 .message.is-info .message-body {
-  border-color: #6dcdf4;
-  color: #389ec7;
+  border-color: #3273dc;
+  color: #4b73b4;
 }
 .message.is-success {
   background-color: #eefcf3;
@@ -2777,35 +2777,35 @@ a.box:active {
   color: white;
 }
 .button.is-info {
-  background-color: #6dcdf4;
+  background-color: #3273dc;
   border-width: 0;
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 .button.is-info:hover, .button.is-info:focus, .button.is-info.is-active {
-  background-color: #55c5f2;
+  background-color: #2366d1;
   border-color: transparent;
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 .button.is-info.is-inverted {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #6dcdf4;
+  background-color: white;
+  color: #3273dc;
 }
 .button.is-info.is-inverted:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #f2f2f2;
 }
 .button.is-info.is-loading:after {
-  border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important;
+  border-color: transparent transparent white white !important;
 }
 .button.is-info.is-outlined {
   background-color: transparent;
-  border-color: #6dcdf4;
+  border-color: #3273dc;
   border-width: 1px;
-  color: #6dcdf4;
+  color: #3273dc;
 }
 .button.is-info.is-outlined:hover, .button.is-info.is-outlined:focus {
-  background-color: #6dcdf4;
-  border-color: #6dcdf4;
-  color: rgba(0, 0, 0, 0.7);
+  background-color: #3273dc;
+  border-color: #3273dc;
+  color: white;
 }
 .button.is-success {
   background-color: #23d160;
@@ -3138,7 +3138,7 @@ a.box:active {
 }
 .input.is-info,
 .textarea.is-info {
-  border-color: #6dcdf4;
+  border-color: #3273dc;
 }
 .input.is-success,
 .textarea.is-success {
@@ -3302,7 +3302,7 @@ a.box:active {
   border-color: #522e90;
 }
 .select select.is-info {
-  border-color: #6dcdf4;
+  border-color: #3273dc;
 }
 .select select.is-success {
   border-color: #23d160;
@@ -3408,7 +3408,7 @@ a.box:active {
   color: #522e90;
 }
 .help.is-info {
-  color: #6dcdf4;
+  color: #3273dc;
 }
 .help.is-success {
   color: #23d160;
@@ -3733,8 +3733,8 @@ a.box:active {
   color: white;
 }
 .notification.is-info {
-  background-color: #6dcdf4;
-  color: rgba(0, 0, 0, 0.7);
+  background-color: #3273dc;
+  color: white;
 }
 .notification.is-success {
   background-color: #23d160;
@@ -3803,10 +3803,10 @@ a.box:active {
   background-color: #522e90;
 }
 .progress.is-info::-webkit-progress-value {
-  background-color: #6dcdf4;
+  background-color: #3273dc;
 }
 .progress.is-info::-moz-progress-bar {
-  background-color: #6dcdf4;
+  background-color: #3273dc;
 }
 .progress.is-success::-webkit-progress-value {
   background-color: #23d160;
@@ -4315,8 +4315,8 @@ a.box:active {
   color: white;
 }
 .tag.is-info {
-  background-color: #6dcdf4;
-  color: rgba(0, 0, 0, 0.7);
+  background-color: #3273dc;
+  color: white;
 }
 .tag.is-success {
   background-color: #23d160;
@@ -4797,42 +4797,42 @@ a.box:active {
   }
 }
 .hero.is-info {
-  background-color: #6dcdf4;
-  color: rgba(0, 0, 0, 0.7);
+  background-color: #3273dc;
+  color: white;
 }
 .hero.is-info .title {
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 .hero.is-info .title a,
 .hero.is-info .title strong {
   color: inherit;
 }
 .hero.is-info .subtitle {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 .hero.is-info .subtitle a,
 .hero.is-info .subtitle strong {
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 .hero.is-info .nav {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 @media screen and (max-width: 768px) {
   .hero.is-info .nav-menu {
-    background-color: #6dcdf4;
+    background-color: #3273dc;
   }
 }
 .hero.is-info a.nav-item,
 .hero.is-info .nav-item a:not(.button) {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .hero.is-info a.nav-item:hover, .hero.is-info a.nav-item.is-active,
 .hero.is-info .nav-item a:not(.button):hover,
 .hero.is-info .nav-item a:not(.button).is-active {
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 .hero.is-info .tabs a {
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
   opacity: 0.9;
 }
 .hero.is-info .tabs a:hover {
@@ -4842,31 +4842,31 @@ a.box:active {
   opacity: 1;
 }
 .hero.is-info .tabs.is-boxed a, .hero.is-info .tabs.is-toggle a {
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 .hero.is-info .tabs.is-boxed a:hover, .hero.is-info .tabs.is-toggle a:hover {
   background-color: rgba(10, 10, 10, 0.1);
 }
 .hero.is-info .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-color: rgba(0, 0, 0, 0.7);
-  color: #6dcdf4;
+  background-color: white;
+  border-color: white;
+  color: #3273dc;
 }
 .hero.is-info.is-bold {
-  background-image: linear-gradient(141deg, #33e2fb 0%, #6dcdf4 71%, #81c3f9 100%);
+  background-image: linear-gradient(141deg, #1577c6 0%, #3273dc 71%, #4366e5 100%);
 }
 @media screen and (max-width: 768px) {
   .hero.is-info .nav-toggle span {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
   }
   .hero.is-info .nav-toggle:hover {
     background-color: rgba(10, 10, 10, 0.1);
   }
   .hero.is-info .nav-toggle.is-active span {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
   }
   .hero.is-info .nav-menu .nav-item {
-    border-top-color: rgba(0, 0, 0, 0.2);
+    border-top-color: rgba(255, 255, 255, 0.2);
   }
 }
 .hero.is-success {
@@ -5169,10 +5169,10 @@ body {
 }
 
 .progress.is-info::-webkit-progress-value {
-  background-color: #6dcdf4;
+  background-color: #3273dc;
 }
 .progress.is-info::-moz-progress-bar {
-  background-color: #6dcdf4;
+  background-color: #3273dc;
 }
 
 .is-primary-darkened {
@@ -5196,6 +5196,7 @@ body {
 .is-login figure {
   max-width: 200px;
   margin: 1em auto 2em;
+  background-color: transparent;
 }
 .is-login .control.has-icon > .fa {
   top: 20px;
@@ -5254,10 +5255,17 @@ body {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-left: 10px solid #6dcdf4;
+  border-left: 10px solid #3273dc;
 }
 .box:hover {
   border-left-width: 20px;
+}
+
+.image {
+  background-color: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
