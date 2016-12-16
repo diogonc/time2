@@ -1,0 +1,48 @@
+﻿$primary-dark: darken($primary, 10%)
+
+.is-primary-darkened
+	background-color: $primary-dark
+	color: $white
+
+
+.is-login
+	+box-shadow(none)
+	background-color: $primary
+	color: $white
+
+	button
+		+transition(all ease 0.5s)
+
+	figure
+		max-width: 200px
+		margin: 1em auto 2em
+
+	.control.has-icon > .fa
+		top: 20px
+		font-size: 1.5em
+		color: $white
+
+	.input
+		+transition(all ease 0.5s)
+		+border-radius(0)
+		+box-shadow(none)
+		background-color: transparent
+		font-size: 2em
+		padding-left: 40px !important
+		color: $white
+		border: none
+		border-bottom: 1px solid rgba($white, 0.5)
+		-webkit-text-fill-color: $white !important
+		font-weight: lighten
+		padding: 1em
+
+		&:hover, &:focus
+			border-bottom: 2px solid $white
+
+		&:-webkit-autofill
+			-webkit-box-shadow: 0 0 0px 1000px $primary inset
+			-webkit-text-fill-color: $warning !important
+
+.is-white
+	color: $white
+	border-color: $white
