@@ -21,10 +21,14 @@
                                 <div class="heading">
                                     <h5 class="title is-5"><strong>@evento.Nome</strong></h5>
                                 </div>
-                                <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-                                <span>@evento.DataInicio.FormatarDiaMesAno() - @evento.DataFim.FormatarDiaMesAno()</span>
-                                <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
-                                <span>@evento.Cidade - @evento.Estado</span>
+                                <div>
+                                    <span class="icon is-small"><i class="fa fa-calendar"></i></span>
+                                    <span>@evento.DataInicio.FormatarDiaMesAno() - @evento.DataFim.FormatarDiaMesAno()</span>
+                                </div>
+                                <div>
+                                    <span class="icon is-small"><i class="fa fa-map-marker"></i></span>
+                                    <span>@evento.Cidade - @evento.Estado</span>
+                                </div>
                             </div>
                         </article>
                         <footer class="card-footer">
