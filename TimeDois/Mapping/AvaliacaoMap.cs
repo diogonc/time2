@@ -12,7 +12,7 @@ namespace TimeDois.Mapping
             HasKey(x => x.Id);
             Property(x => x.Id).HasColumnType("int").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
             Property(x => x.Aprovado).HasColumnType("bit").IsRequired();
-            Property(x => x.Justificativa).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
+            Property(x => x.Justificativa).HasColumnType("nvarchar").HasMaxLength(null);
             Property(x => x.TipoDeAvaliacao).HasColumnType("int").IsRequired();
         }
     }

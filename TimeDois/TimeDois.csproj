@@ -203,6 +203,10 @@
     <Compile Include="Migrations\201612162121172_RemovendoPercentual.Designer.cs">
       <DependentUpon>201612162121172_RemovendoPercentual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612162210163_RemovendoRequiredDaJustificativa.cs" />
+    <Compile Include="Migrations\201612162210163_RemovendoRequiredDaJustificativa.Designer.cs">
+      <DependentUpon>201612162210163_RemovendoRequiredDaJustificativa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Avaliacao.cs" />
     <Compile Include="Models\Base\Entidade.cs" />
@@ -336,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612162121172_RemovendoPercentual.resx">
       <DependentUpon>201612162121172_RemovendoPercentual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612162210163_RemovendoRequiredDaJustificativa.resx">
+      <DependentUpon>201612162210163_RemovendoRequiredDaJustificativa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

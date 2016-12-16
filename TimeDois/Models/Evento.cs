@@ -21,6 +21,7 @@ namespace TimeDois.Models
         public string Endereco { get { return Logradouro + ", " + Cidade + " - " + Estado; } }
 
         public virtual ICollection<Participacao> Participantes { get; set; }
+        public decimal ValorTotal { get { return ValorDaPassagem + ValorDeInscricao; } }
 
         public Evento()
         {
