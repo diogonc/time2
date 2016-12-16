@@ -1,16 +1,62 @@
 ﻿@using System.Web.UI.WebControls
 @model TimeDois.ViewModel.LoginViewModel
 @{
-    Layout = "";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Time2 Digieventos</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="@Url.Content("~/Content/css/estilos.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/FontAwesome/css/font-awesome.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h2>Login</h2>
 
-<h2>Login</h2>
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="card is-inline-block">
+                    <div class="card-content">
+                        <div class="media is-inline-block">
+                            <div class="media-content">
+                                <figure class="image is-128x128">
+                                    <img src="http://4.bp.blogspot.com/_qe5TXi27TQA/SbpUFccySLI/AAAAAAAAEAY/H_1wbsJhog0/s400/carrefour-logo-logotipo-logomarca.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-5">John Smith</p>
+                                <p class="subtitle is-6">@@johnsmith</p>
+                            </div>
+                        </div>
 
-@using (@Html.BeginForm("Logar", "Login"))
-{ 
-    @Html.LabelFor(x => x.Login)
-    @Html.TextBoxFor(x => x.Login)
-    @Html.LabelFor(x => x.Senha)
-    @Html.PasswordFor(x => x.Senha)
-    <button type="submit" title="Entrar">Entrar</button>
-}
+                        @using (@Html.BeginForm("Logar", "Login"))
+                        {
+                            <p class="control has-icon">
+                                @Html.TextBoxFor(x => x.Login, new { @class="input", placeholder = "Usuário"})
+                                <i class="fa fa-envelope"></i>
+                            </p>
+
+                            <p class="control has-icon">
+                                @Html.PasswordFor(x => x.Senha, new { @class = "input", placeholder = "Senha" })
+                                <i class="fa fa-lock"></i>
+                            </p>
+                            <p class="control">
+                                <button class="button is-success" type="submit">
+                                    Login
+                                </button>
+                            </p>
+                        }
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+</body>
+</html>
