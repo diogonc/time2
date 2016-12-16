@@ -146,6 +146,7 @@
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\quero-ir-logo.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -265,6 +266,7 @@
     <Content Include="Content\sass\estilos.sass" />
     <Content Include="Content\css\estilos.css.map" />
     <Content Include="Content\sass\theme\grid\_grid.sass" />
+    <Content Include="Content\sass\theme\theme.sass" />
     <None Include="Views\Eventos\Detalhes.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
