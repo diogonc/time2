@@ -10,9 +10,10 @@ namespace TimeDois.Models
             Avaliacoes = new List<Avaliacao>();
         }
 
-        public Usuario(string login)
+        public Usuario(string login, string senha)
         {
             Login = login;
+            Senha = senha;
             Avaliacoes = new List<Avaliacao>();
         }
 
