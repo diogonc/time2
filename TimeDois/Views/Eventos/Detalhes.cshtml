@@ -19,7 +19,7 @@
 
     <footer>
         <p>
-            <button>Desejo participar dessa bagaça</button>
+            @Html.ActionLink("Eventos", "Participar", "Desejo participar dessa bagaça", new { eventoId = @Model.Nome }, null)
         </p>
     </footer>
 </article>
