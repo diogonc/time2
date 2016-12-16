@@ -12,6 +12,7 @@ namespace TimeDois.Models
         public DateTime DataFim { get; set; }
         public decimal ValorDeInscricao { get; set; }
         public string UrlDaLogo { get; set; }
+        public string Link { get; set; }
         public string Descricao { get; set; }
         public virtual ICollection<Participacao> Participantes { get; set; }
 

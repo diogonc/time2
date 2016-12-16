@@ -7,6 +7,11 @@ namespace TimeDois.Models
         public string Logradouro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+
+        public override string ToString()
+        {
+            return Logradouro + ", " + Cidade + " - " + Estado;
+        }
         public virtual Evento Evento { get; set; }
     }
 }
