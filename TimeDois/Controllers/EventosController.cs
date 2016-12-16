@@ -48,7 +48,7 @@ namespace TimeDois.Controllers
             var login = (string) Session["Login"];
             var usuario = _usuarioRepository.Obter(u => u.Login == login);
             var evento = _eventoRepository.Obter(e => e.Id == eventoId);
-            evento.TenhoInteresse(usuario);
+            evento.ManifestarInteresse(usuario);
             _eventoRepository.Atualizar(evento);
             return RedirectToAction("Detalhes", "Eventos", new {eventoId = evento.Id});
         }

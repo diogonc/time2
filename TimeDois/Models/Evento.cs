@@ -24,7 +24,7 @@ namespace TimeDois.Models
             Participantes = new List<Participacao>();
         }
 
-        public void TenhoInteresse(Usuario usuario)
+        public void ManifestarInteresse(Usuario usuario)
         {
             Participantes.Add(new Participacao(usuario, this));
         }
