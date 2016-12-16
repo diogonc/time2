@@ -50,5 +50,17 @@
 </section>
 
 <section id="section" class="section container">
-    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=@(Model.Endereco.Replace(" ", "+"))&key=AIzaSyCXK02xR8GjV-34Gp1ou_92YoGZeKxT1eM" allowfullscreen></iframe>
+    <div class="columns">
+        <div class="column">
+            <iframe width="600" height="450" frameborder="0" style="border: 0" src="https://www.google.com/maps/embed/v1/place?q=@(Model.Endereco.Replace(" ", "+"))&key=AIzaSyCXK02xR8GjV-34Gp1ou_92YoGZeKxT1eM" allowfullscreen></iframe>
+        </div>
+        <div class="column">
+            <ul class="columns-flexible">
+                @foreach (var participante in Model.Participantes)
+                {
+                    <li>@participante.Usuario.Nome</li>
+                }
+            </ul>
+        </div>
+    </div>
 </section>
