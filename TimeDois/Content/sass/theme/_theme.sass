@@ -1,10 +1,11 @@
-﻿$primary-dark: darken($primary, 10%)
+﻿body
+	background-color: $white
 
 .progress.is-info
 	&::-webkit-progress-value
-		background-color: #6dcdf4
+		background-color: $info
 	&::-moz-progress-bar
-		background-color: #6dcdf4
+		background-color: $info
 
 .is-primary-darkened
 	background-color: $primary-dark
@@ -52,3 +53,17 @@
 .is-white
 	color: $white
 	border-color: $white
+
+.footer
+	background-color: $primary
+	*
+		color: $white
+
+.box
+	+transition(all ease 0.5s)
+	+box-shadow(0 0 50px $grey-light)
+	+border-radius(0)
+	border-left: 10px solid $info
+
+	&:hover
+		border-left-width: 20px

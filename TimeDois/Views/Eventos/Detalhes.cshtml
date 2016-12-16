@@ -17,34 +17,30 @@
                     <p class="subtitle">
                         @Model.Descricao
                     </p>
-                    <a href="@Url.Action("Participar", "Eventos", new { eventoId = @Model.Id })" class="@(@Model.UsuarioInteressado((string) Session["Login"])? "is-success is-disabled" : "") button is-large is-primary is-inverted">
+                    <a href="@Url.Action("Participar", "Eventos", new {eventoId = @Model.Id})" class="@(@Model.UsuarioInteressado((string) Session["Login"]) ? "is-success is-disabled" : "") button is-large is-primary is-inverted">
                         <span class="icon">
                             <i class="fa fa-star"></i>
                         </span>
-                        <span>@(@Model.UsuarioInteressado((string)Session["Login"]) ? "Eu vou!" : "Quero ir!")</span>
+                        <span>@(@Model.UsuarioInteressado((string) Session["Login"]) ? "Eu vou!" : "Quero ir!")</span>
                     </a>
                 </div>
-                <div class="column is-narrow">
-                    <h5 class="title is-5">
-                        <strong>Data</strong>
-                    </h5>
-                    <p class="subtitle">
-                        @Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()
-                    </p>
-                    <h5 class="title is-5">
-                        <strong>Local</strong>
-                    </h5>
-                    <p class="subtitle">
-                        @Model.Cidade - @Model.Estado
-                    </p>
-                    <h5 class="title is-5">
-                        <strong>Preço</strong>
-                    </h5>
-                    <p class="subtitle">
-                        @Model.ValorDeInscricao.FormatarMonetarioOuZero()
-                    </p>
-                </div>
             </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container level">
+        <div class="level-item has-text-centered">
+            <p class="heading">Data</p>
+            <p class="title">@Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()</p>
+        </div>
+        <div class="level-item has-text-centered">
+            <p class="heading">Local</p>
+            <p class="title">@Model.Cidade - @Model.Estado</p>
+        </div>
+        <div class="level-item has-text-centered">
+            <p class="heading">Inscrição</p>
+            <p class="title">@Model.ValorDeInscricao.FormatarMonetarioOuZero()</p>
         </div>
     </div>
 </section>

@@ -143,6 +143,7 @@
     <Content Include="Content\Bulma\base\minireset.sass" />
     <Content Include="Content\Bulma\base\_all.sass" />
     <Content Include="Content\css\estilos.css" />
+    <Content Include="Content\digix-logo.svg" />
     <Content Include="Content\FontAwesome\css\font-awesome.css" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
@@ -286,7 +287,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Orcamento\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
