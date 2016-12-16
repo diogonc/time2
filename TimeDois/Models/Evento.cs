@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TimeDois.Models
 {
@@ -11,16 +12,16 @@ namespace TimeDois.Models
         public decimal ValorDeInscricao { get; set; }
         public string UrlDaLogo { get; set; }
         public string Descricao { get; set; }
-        private IEnumerable<Participacao> participantes { get; }
+        public IList<Participacao> Participantes { get; set; }
 
         public Evento()
         {
-            participantes = new List<Participacao>();
+            Participantes = new List<Participacao>();
         }
 
-        public void tenhoInteresse(Usuario usuario)
+        public void TenhoInteresse(Usuario usuario)
         {
-            participantes.add(new Participacao(usuario, evento));
+            Participantes.Add(new Participacao(usuario, this));
         }
     }
 }
