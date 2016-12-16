@@ -39,6 +39,7 @@ namespace TimeDois.Context
                 .WithMany(x => x.Avaliacoes)
                 .Map(x => x.MapKey("IdUsuarioQueAvaliou"));
 
+            // TODO: Verificar necessidade de Participacao em Avaliacao
             dbModelBuilder.Entity<Avaliacao>()
                 .HasRequired(x => x.Participacao)
                 .WithMany(x => x.Avaliacoes)

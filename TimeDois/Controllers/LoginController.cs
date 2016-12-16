@@ -28,9 +28,9 @@ namespace TimeDois.Controllers
             var usuario = _usuarioRepository.Obter(u => u.Login == viewModel.Login);
             Session["Login"] = viewModel.Login;
             if (usuario == null)
-            {
                 return RedirectToAction("Index", "Login");
-            }
+            if (usuario.EhGerencia())
+                return RedirectToAction("Listar", "Aprovacao");
             return RedirectToAction("Listar", "Eventos");
         }
     }
