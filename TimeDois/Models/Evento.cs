@@ -11,6 +11,7 @@ namespace TimeDois.Models
         public DateTime DataInicio { get; set; }
         public DateTime DataFim { get; set; }
         public decimal ValorDeInscricao { get; set; }
+        public decimal ValorDaPassagem { get; set; }
         public string UrlDaLogo { get; set; }
         public string Link { get; set; }
         public string Descricao { get; set; }

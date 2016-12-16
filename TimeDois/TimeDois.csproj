@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.Designer.cs">
       <DependentUpon>201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612162056059_CriandoValorDaPassagem.cs" />
+    <Compile Include="Migrations\201612162056059_CriandoValorDaPassagem.Designer.cs">
+      <DependentUpon>201612162056059_CriandoValorDaPassagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Avaliacao.cs" />
     <Compile Include="Models\Base\Entidade.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.resx">
       <DependentUpon>201612162030156_AdicionadoJustificativaEPercentualDeSubsidio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612162056059_CriandoValorDaPassagem.resx">
+      <DependentUpon>201612162056059_CriandoValorDaPassagem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
