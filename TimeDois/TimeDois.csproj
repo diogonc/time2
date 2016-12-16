@@ -16,7 +16,7 @@
     <RootNamespace>TimeDois</RootNamespace>
     <AssemblyName>TimeDois</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -138,6 +138,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Bulma\base\generic.sass" />
+    <Content Include="Content\Bulma\base\helpers.sass" />
+    <Content Include="Content\Bulma\base\minireset.sass" />
+    <Content Include="Content\Bulma\base\_all.sass" />
+    <Content Include="Content\FontAwesome\css\font-awesome.css" />
+    <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -147,7 +154,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Context\Time2Entities.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +165,7 @@
     <Compile Include="Mapping\UsuarioMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Avaliacao.cs" />
+    <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\Participacao.cs" />
     <Compile Include="Models\Time.cs" />
@@ -171,7 +179,62 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Eventos\Listar.cshtml" />
+    <Content Include="Content\Bulma\components\card.sass" />
+    <Content Include="Content\Bulma\components\highlight.sass" />
+    <Content Include="Content\Bulma\components\level.sass" />
+    <Content Include="Content\Bulma\components\media.sass" />
+    <Content Include="Content\Bulma\components\menu.sass" />
+    <Content Include="Content\Bulma\components\message.sass" />
+    <Content Include="Content\Bulma\components\modal.sass" />
+    <Content Include="Content\Bulma\components\nav.sass" />
+    <Content Include="Content\Bulma\components\pagination.sass" />
+    <Content Include="Content\Bulma\components\panel.sass" />
+    <Content Include="Content\Bulma\components\tabs.sass" />
+    <Content Include="Content\Bulma\components\_all.sass" />
+    <Content Include="Content\Bulma\elements\box.sass" />
+    <Content Include="Content\Bulma\elements\button.sass" />
+    <Content Include="Content\Bulma\elements\content.sass" />
+    <Content Include="Content\Bulma\elements\form.sass" />
+    <Content Include="Content\Bulma\elements\image.sass" />
+    <Content Include="Content\Bulma\elements\notification.sass" />
+    <Content Include="Content\Bulma\elements\other.sass" />
+    <Content Include="Content\Bulma\elements\progress.sass" />
+    <Content Include="Content\Bulma\elements\table.sass" />
+    <Content Include="Content\Bulma\elements\title.sass" />
+    <Content Include="Content\Bulma\elements\_all.sass" />
+    <Content Include="Content\Bulma\grid\columns.sass" />
+    <Content Include="Content\Bulma\grid\tiles.sass" />
+    <Content Include="Content\Bulma\grid\_all.sass" />
+    <Content Include="Content\Bulma\layout\footer.sass" />
+    <Content Include="Content\Bulma\layout\hero.sass" />
+    <Content Include="Content\Bulma\layout\section.sass" />
+    <Content Include="Content\Bulma\layout\_all.sass" />
+    <Content Include="Content\Bulma\utilities\controls.sass" />
+    <Content Include="Content\Bulma\utilities\functions.sass" />
+    <Content Include="Content\Bulma\utilities\mixins.sass" />
+    <Content Include="Content\Bulma\utilities\variables.sass" />
+    <Content Include="Content\Bulma\utilities\_all.sass" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\FontAwesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\FontAwesome\scss\font-awesome.scss" />
+    <Content Include="Content\FontAwesome\scss\_animated.scss" />
+    <Content Include="Content\FontAwesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\FontAwesome\scss\_core.scss" />
+    <Content Include="Content\FontAwesome\scss\_fixed-width.scss" />
+    <Content Include="Content\FontAwesome\scss\_icons.scss" />
+    <Content Include="Content\FontAwesome\scss\_larger.scss" />
+    <Content Include="Content\FontAwesome\scss\_list.scss" />
+    <Content Include="Content\FontAwesome\scss\_mixins.scss" />
+    <Content Include="Content\FontAwesome\scss\_path.scss" />
+    <Content Include="Content\FontAwesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\FontAwesome\scss\_screen-reader.scss" />
+    <Content Include="Content\FontAwesome\scss\_stacked.scss" />
+    <Content Include="Content\FontAwesome\scss\_variables.scss" />
+    <None Include="Views\Eventos\Detalhes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -181,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Servicos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -197,7 +261,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>29565</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:29565/</IISUrl>
+          <IISUrl>http://localhost/TimeDois</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
