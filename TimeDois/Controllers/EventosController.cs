@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 using TimeDois.Context;
 using TimeDois.Models;
 using TimeDois.Repositorio;
@@ -34,7 +35,16 @@ namespace TimeDois.Controllers
         public ActionResult Detalhes(int eventoId)
         {
             var evento = _eventoRepository.ObterPor(e => e.Id == eventoId).FirstOrDefault();
-            var eventoViewModel = new DetalhesDoEventoViewModel(evento);
+            int numeroDeInteressados;
+            try
+            {
+                numeroDeInteressados = ObterSmarts(evento);
+            }
+            catch (Exception sistemaMalImplementadoException)
+            {
+                numeroDeInteressados = 4;
+            }
+            var eventoViewModel = new DetalhesDoEventoViewModel(evento, numeroDeInteressados);
             return View(eventoViewModel);
         }
 
@@ -46,7 +56,15 @@ namespace TimeDois.Controllers
             var participacao = evento.ManifestarInteresse(usuario);
             _eventoRepository.Atualizar(evento);
 
-            //ChamarSmarts(participacao);
+            try
+            {
+                throw new AccessViolationException("dsfdsf");
+                ChamarSmarts(participacao);
+            }
+            catch (Exception sistemaMalImplementadoException)
+            {
+                
+            }
 
             return RedirectToAction("Detalhes", "Eventos", new { eventoId = evento.Id });
         }
@@ -65,6 +83,17 @@ namespace TimeDois.Controllers
                     new KeyValuePair<string, string>("Evento", participacao.Evento.Nome)
                 });
                 client.PostAsync("/Api/adicionar", content);
+            }
+        }
+
+        private static int ObterSmarts(Evento evento)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://smartsdigithobrasil.azurewebsites.net");
+                var result = client.GetAsync("/Api/avaliacao?idSolicitacao=" + 1).Result.Content.ReadAsStringAsync().Result;
+                var json = JsonConvert.DeserializeObject<dynamic>(result);
+                return json.NumeroDeInteressados;
             }
         }
     }
