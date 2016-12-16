@@ -35,7 +35,7 @@
                         <strong>Local</strong>
                     </h5>
                     <p class="subtitle">
-                        @Model.Cidade + @Model.Estado
+                        @Model.Cidade - @Model.Estado
                     </p>
                     <h5 class="title is-5">
                         <strong>Preço</strong>
@@ -50,7 +50,5 @@
 </section>
 
 <section id="section" class="section container">
-
-    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=@Model.Endereco.FormatarUrl()&key=AIzaSyCXK02xR8GjV-34Gp1ou_92YoGZeKxT1eM" allowfullscreen></iframe>
-
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=@(Model.Endereco.Replace(" ", "+"))&key=AIzaSyCXK02xR8GjV-34Gp1ou_92YoGZeKxT1eM" allowfullscreen></iframe>
 </section>
