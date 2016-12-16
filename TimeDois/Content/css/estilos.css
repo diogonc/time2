@@ -5244,7 +5244,7 @@ body {
   color: white;
 }
 
-.box {
+.box:not(.normal) {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -5257,15 +5257,8 @@ body {
   border-radius: 0;
   border-left: 10px solid #3273dc;
 }
-.box:hover {
+.box:not(.normal):hover {
   border-left-width: 20px;
-}
-
-.image {
-  background-color: white;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
 }
 
 /*# sourceMappingURL=estilos.css.map */

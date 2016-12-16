@@ -36,6 +36,7 @@ namespace TimeDois.ViewModel
         public decimal ValorDeInscricao { get; set; }
         public decimal ValorDaDiaria { get; set; }
         public decimal ValorDaPassagem { get; set; }
+        public decimal ValorTotal { get { return ValorDeInscricao + ValorDaPassagem; } }
 
         public string CssDoBotaoDeInteresse(string login)
         {

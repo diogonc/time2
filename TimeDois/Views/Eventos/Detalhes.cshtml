@@ -4,25 +4,31 @@
 <section class="hero is-primary">
     <div class="hero-body">
         <div class="container">
-            <div class="columns is-vcentered">
-                <div class="column is-narrow">
-                    <figure class="image" style="width: 300px">
+            <div class="columns is-vcentered has-text-centered">
+                <div class="column is-one-third">
+                    <figure class="is-inline-block" style="width: 300px">
                         <img src="@Model.UrlDaLogo" alt="Image">
                     </figure>
                 </div>
-                <div class="column">
-                    <p class="title">
-                        @Model.Nome
-                    </p>
-                    <p class="subtitle">
-                        @Model.Descricao
-                    </p>
-                    <a href="@Url.Action("Participar", "Eventos", new {eventoId = @Model.Id})" class="@Model.CssDoBotaoDeInteresse((string) Session["Login"]) button is-large is-primary is-inverted">
-                        <span class="icon">
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <span>@Model.TextoDoBotaoDeInteresse((string) Session["Login"])</span>
-                    </a>
+                <div class="column is-one-third has-text-centered">
+                    <div class="is-inline-block has-text-left">
+                        <p class="title">
+                            @Model.Nome
+                        </p>
+                        <p class="subtitle">
+                            @Model.Descricao
+                        </p>
+                        <a href="@Url.Action("Participar", "Eventos", new {eventoId = @Model.Id})" class="@Model.CssDoBotaoDeInteresse((string) Session["Login"]) button is-large is-primary is-inverted">
+                            <span class="icon">
+                                <i class="fa fa-star"></i>
+                            </span>
+                            <span>@Model.TextoDoBotaoDeInteresse((string)Session["Login"])</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="column is-one-third has-text-centered">
+                    <p class="heading">Valor total</p>
+                    <p class="title">@Model.ValorTotal.FormatarMonetarioOuZero()</p>
                 </div>
             </div>
         </div>
@@ -32,7 +38,7 @@
     <div class="container level">
         <div class="level-item has-text-centered">
             <p class="heading">Data</p>
-            <p class="title">@Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()</p>
+            <p class="title">@Model.DataInicio.Day/@Model.DataInicio.EscreverMes().Substring(0, 3) - @Model.DataFim.Day/@Model.DataFim.EscreverMes().Substring(0, 3)</p>
         </div>
         <div class="level-item has-text-centered">
             <p class="heading">Local</p>
@@ -43,11 +49,7 @@
             <p class="title">@Model.ValorDeInscricao.FormatarMonetarioOuZero()</p>
         </div>
         <div class="level-item has-text-centered">
-            <p class="heading">Diária</p>
-            <p class="title">@Model.ValorDaDiaria.FormatarMonetarioOuZero()</p>
-        </div>
-        <div class="level-item has-text-centered">
-            <p class="heading">Inscrição</p>
+            <p class="heading">Passagem (estimada)</p>
             <p class="title">@Model.ValorDaPassagem.FormatarMonetarioOuZero()</p>
         </div>
     </div>
@@ -61,27 +63,27 @@
         <div class="column">
             <table class="table">
                 <thead>
-                <tr>
-                    <th>Colaboradores interessados no evento</th>
-                    <th></th>
-                </tr>
+                    <tr>
+                        <th>Colaboradores interessados no evento</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
-                @foreach (var participante in Model.Participantes)
-                {
-                    <tr>
-                        <td>
+                    @foreach (var participante in Model.Participantes)
+                    {
+                        <tr>
+                            <td>
 
-                            <span class="title is-5">
+                                <span class="title is-5">
                                     @participante.Usuario.Nome
                                 </span>
 
-                        </td>
-                        <td class="has-text-right">
-                            <span class="tag is-info">@participante.Status.ToDescription(false) </span>
-                        </td>
-                    </tr>
-                }
+                            </td>
+                            <td class="has-text-right">
+                                <span class="tag is-info">@participante.Status.ToDescription(false) </span>
+                            </td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>

@@ -60,7 +60,7 @@
 	*
 		color: $white
 
-.box
+.box:not(.normal)
 	+transition(all ease 0.5s)
 	+box-shadow(0 0 50px $grey-light)
 	+border-radius(0)
@@ -68,7 +68,3 @@
 
 	&:hover
 		border-left-width: 20px
-
-.image
-	background-color: $white
-	+border-radius(5px)
