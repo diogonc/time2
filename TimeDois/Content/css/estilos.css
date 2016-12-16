@@ -5296,4 +5296,9 @@ body {
   margin-left: 1em;
 }
 
+iframe {
+  width: 100% !important;
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=estilos.css.map */
