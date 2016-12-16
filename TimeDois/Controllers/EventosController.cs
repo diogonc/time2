@@ -31,7 +31,8 @@ namespace TimeDois.Controllers
         public ActionResult Detalhes(int eventoId)
         {
             var evento = _eventoRepository.ObterPor(e => e.Id == eventoId).FirstOrDefault();
-            return View(evento);
+            var eventoViewModel = new DetalhesDoEventoViewModel(evento);
+            return View(eventoViewModel);
         }
 
         public ActionResult Participar(int eventoId)

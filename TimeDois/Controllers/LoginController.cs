@@ -25,8 +25,8 @@ namespace TimeDois.Controllers
         [HttpPost]
         public ActionResult Logar(LoginViewModel viewModel)
         {
-            Session["Login"] = viewModel.Login;
             var usuario = _usuarioRepository.Obter(u => u.Login == viewModel.Login);
+            Session["Login"] = viewModel.Login;
             if (usuario == null)
             {
                 return RedirectToAction("Index", "Login");
