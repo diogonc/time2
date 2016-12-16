@@ -18,6 +18,9 @@ namespace TimeDois.Mapping
             Property(x => x.ValorDeInscricao).HasColumnType("decimal").IsRequired();
             Property(x => x.DataInicio).HasColumnType("datetime").IsRequired();
             Property(x => x.DataFim).HasColumnType("datetime").IsRequired();
+            Property(x => x.Cidade).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
+            Property(x => x.Estado).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
+            Property(x => x.Logradouro).HasColumnType("nvarchar").HasMaxLength(null).IsRequired();
         }
     }
 }

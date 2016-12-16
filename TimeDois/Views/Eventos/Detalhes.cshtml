@@ -1,1 +1,69 @@
-﻿
+﻿@using TimeDois.Extensoes
+@model TimeDois.Models.Evento
+
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-narrow">
+                    <figure class="image" style="width: 300px">
+                        <img src="@Model.UrlDaLogo" alt="Image">
+                    </figure>
+                </div>
+                <div class="column">
+                    <p class="title">
+                        @Model.Nome
+                    </p>
+                    <p class="subtitle">
+                        @Model.Descricao
+                    </p>
+                    <a class="button is-large is-primary is-inverted">
+                        <span class="icon">
+                            <i class="fa fa-star"></i>
+                        </span>
+                        <span>Tenho interesse</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section" class="section container">
+
+    <section class="section">
+        <div class="container">
+            <div class="heading">
+                <h1 class="title">@Model.Nome</h1>
+                <h2 class="subtitle">
+                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <article>
+        <h1>@Model.Nome</h1>
+
+        <img src="@Model.UrlDaLogo" alt="Logomarca do evento" />
+
+        <p class="descricao">
+            @Model.Descricao
+        </p>
+
+        <details>
+            @*<address>@Model.Endereco</address>*@
+            <span class="valor">@Model.ValorDeInscricao.FormatarMonetarioOuZero()</span>
+            <time>@Model.DataInicio.FormatarDiaMesAno() - @Model.DataFim.FormatarDiaMesAno()</time>
+            <a href="@Model.Link" target="_blank">Página do evento</a>
+        </details>
+
+        <footer>
+            <p>
+                @Html.ActionLink("Desejo participar dessa bagaça", "Participar", "Eventos", new { eventoId = @Model.Nome }, null)
+            </p>
+        </footer>
+    </article>
+
+
+</section>
