@@ -34,6 +34,8 @@ namespace TimeDois.ViewModel
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public decimal ValorDeInscricao { get; set; }
+        public decimal ValorDaDiaria { get; set; }
+        public decimal ValorDaPassagem { get; set; }
 
         public string CssDoBotaoDeInteresse(string login)
         {
