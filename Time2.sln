@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time2", "Time2\Time2.csproj", "{51A04BA1-6267-4CFE-9BEE-80E507C39FE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeDois", "TimeDois\TimeDois.csproj", "{3AFECC54-0DE1-4C58-932D-251F52982C73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{51A04BA1-6267-4CFE-9BEE-80E507C39FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51A04BA1-6267-4CFE-9BEE-80E507C39FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51A04BA1-6267-4CFE-9BEE-80E507C39FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51A04BA1-6267-4CFE-9BEE-80E507C39FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFECC54-0DE1-4C58-932D-251F52982C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFECC54-0DE1-4C58-932D-251F52982C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFECC54-0DE1-4C58-932D-251F52982C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFECC54-0DE1-4C58-932D-251F52982C73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
