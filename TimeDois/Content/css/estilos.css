@@ -5164,6 +5164,13 @@ a.box:active {
     flex: 1 0;
   }
 }
+.progress.is-info::-webkit-progress-value {
+  background-color: #6dcdf4;
+}
+.progress.is-info::-moz-progress-bar {
+  background-color: #6dcdf4;
+}
+
 .is-primary-darkened {
   background-color: #3c2269;
   color: white;
