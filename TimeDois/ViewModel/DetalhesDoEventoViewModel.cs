@@ -7,7 +7,7 @@ namespace TimeDois.ViewModel
 {
     public class DetalhesDoEventoViewModel
     {
-        public DetalhesDoEventoViewModel(Evento evento)
+        public DetalhesDoEventoViewModel(Evento evento, int numeroDeInteressados)
         {
             UrlDaLogo = evento.UrlDaLogo;
             Nome = evento.Nome;
@@ -22,7 +22,10 @@ namespace TimeDois.ViewModel
             ValorDaPassagem = evento.ValorDaPassagem;
             ValorDaDiaria = ((DataFim - DataInicio).Days + 1) * 440m;
             Endereco = evento.Endereco;
+            NumeroDeInteressados = numeroDeInteressados;
         }
+
+        public int NumeroDeInteressados { get; set; }
 
         public string Endereco { get; set; }
 

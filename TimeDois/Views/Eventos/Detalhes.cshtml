@@ -18,12 +18,22 @@
                         <p class="subtitle">
                             @Model.Descricao
                         </p>
-                        <a href="@Url.Action("Participar", "Eventos", new {eventoId = @Model.Id})" class="@Model.CssDoBotaoDeInteresse((string) Session["Login"]) button is-large is-primary is-inverted">
-                            <span class="icon">
-                                <i class="fa fa-star"></i>
-                            </span>
-                            <span>@Model.TextoDoBotaoDeInteresse((string)Session["Login"])</span>
-                        </a>
+                        <div class="columns is-vcentered">
+                            <div class="column is-narrow">
+                                <a href="@Url.Action("Participar", "Eventos", new {eventoId = @Model.Id})" class="@Model.CssDoBotaoDeInteresse((string) Session["Login"]) button is-large is-primary is-inverted">
+                                    <span class="icon">
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span>@Model.TextoDoBotaoDeInteresse((string)Session["Login"])</span>
+                                </a>
+                            </div>
+                            <div class="column is-narrow">
+                                <span class="icon">
+                                    <i class="fa fa-star"></i>
+                                </span>
+                                <span>@Model.NumeroDeInteressados</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="column is-one-third has-text-centered">
